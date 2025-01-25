@@ -4,6 +4,11 @@
      font-family: 'Poppins', sans-serif;
      padding: 0;
      margin: 0;
+     cursor: default;
+ }
+
+ p, h1,h2,h3,h4{
+    cursor: default;
  }
 
  :root {
@@ -284,10 +289,15 @@
  .project-card img:hover{
     opacity: 0.5;
  }
-
- .project-card p, .project-card h2{
+ .project-card h2{
     width: 100%;
     text-align: left;
+ }
+
+ .project-card p{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
  }
 
  .upper-card{
