@@ -7,7 +7,8 @@
  }
 
  :root {
-     --themeMain: #f09444;
+     /* --themeMain: #f09444; */
+     --themeMain: #ec8225;
      --fontColor: #FFF;
      --themeBlack: #252525;
      --themeOffBlack: #1b1b1b;
@@ -41,7 +42,11 @@
      cursor: pointer;
  }
 
- .topNav>li {
+ .topNav>a{
+    text-decoration: none;
+ }
+
+ .topNav li {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -82,9 +87,9 @@
 
  .main-wrapper {
      width: 100%;
-     height: 200vh;
      display: flex;
      justify-content: center;
+     margin-top: 2%;
  }
 
  .container {
@@ -112,7 +117,7 @@
  }
 
  .profile-card>h1 {
-     padding-top: 15px;
+     padding-top: 25px;
  }
 
  .profile-card>h4 {
@@ -122,11 +127,11 @@
  }
 
  .profile-card>span {
-     height: 70px;
+     height: 30px;
  }
 
  .social-icon {
-    margin-top: 30px;
+     margin-top: 30px;
      width: 70%;
      display: flex;
      justify-content: space-evenly;
@@ -165,26 +170,31 @@
      flex-direction: column;
  }
 
- .Home h1, .Experiences h1 {
+ .section-title {
      color: var(--fontColor);
      font-size: 118px;
      line-height: 100px;
  }
 
- .Home .lighter, .Experiences .lighter {
-     /* color: var(--themeLightBlack); */
+ .section-title-sm {
+     color: var(--fontColor);
+     font-size: 88px;
+     line-height: 75px;
+ }
+
+ .lighter {
      color: var(--themeGray);
      opacity: 0.3;
  }
 
  .Home h3 {
-     width: 53%;
+     width: 55%;
      color: var(--themeGray);
      font-weight: 400;
  }
 
- .Home span {
-     height: 50px;
+ .spanHeight {
+     margin-top: 50px;
  }
 
  .numbers-container {
@@ -215,9 +225,9 @@
      margin-top: -25px;
  }
 
- .projects-container {
+ .projects-container, .edu-container {
      width: 100%;
-     margin-top: 10%;
+     margin-top: 30px;
      height: fit-content;
      row-gap: 20px;
      display: flex;
@@ -225,25 +235,28 @@
      justify-content: space-evenly;
  }
 
- .odd-container {
-     display: grid;
-     grid-template-columns: 39% 59%;
-     column-gap: 2%;
+ .project-card-container, .edu-card-container{
+    display: grid;
+    column-gap: 2%;
+    grid-template-columns: 49% 49%;
  }
 
- .even-container {
-     display: grid;
-     grid-template-columns: 59% 39%;
-     column-gap: 2%;
+ .even{
+    grid-template-columns: 59% 39%;
  }
 
- .project-card {
+ .odd{
+    grid-template-columns: 39% 59%;
+ }
+
+ .project-card, .edu-card {
      color: var(--fontColor);
-     height: 200px;
+     min-height: 150px;
+     height: fixed;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     align-items: flex-start;
+     align-items: center;
      background-color: var(--themeLightBlack);
      border-radius: 15px;
      padding: 15px;
@@ -252,10 +265,34 @@
  }
 
  .project-card:hover {
-     transform: scale(1.05);
+     transform: scale(1.02);
  }
 
- .upper-card {
+ .project-card h2 {
+     font-weight: 600;
+     font-size: 22px;
+ }
+
+ .project-card img{
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 8px;
+    transition: all 300ms;
+ }
+
+ .project-card img:hover{
+    opacity: 0.5;
+ }
+
+ .project-card p, .project-card h2{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+ }
+
+ .upper-card{
+     width: 100%;
      display: flex;
      justify-content: space-between;
  }
@@ -265,16 +302,166 @@
  }
 
  .upper-card i {
-     font-size: 35px;
+     font-size: 30px;
      color: var(--themeMain);
-     transition: all 500ms;
+     background-size: cover;
+     border-radius: 50%;
+     margin: 0;
+     padding: 0;
+     transition: all 300ms;
  }
 
  .upper-card i:hover {
-     transform: scale(1.1);
+     background-color: var(--fontColor);
  }
 
- .project-card h2 {
-     font-weight: 600;
+ .edu-lower-card, .edu-upper-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65% 25%;
+    column-gap: 10%;
+    align-items: center;
+ }
+
+ .edu-lower-card{
+    color: var(--themeGray);
+ }
+
+ .edu-upper-card h2{
+    font-size: 20px;
+    font-weight: 600;
+ }
+
+ .edu-card h4, .edu-lower-card p:nth-child(even){
+    font-weight: 400;
+    color: var(--fontColor);
+ }
+
+ .edu-card:nth-child(even) h4{
+    height:100%;
+ }
+
+ .image-container{
+    display: flex;
+    justify-content: center;
+ }
+
+ .image-container:hover img {
+    opacity: 0.5;
+  }
+
+ .icon {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 45px; /* Adjust the size of the icon as needed */
+    color: var(--themeMain)
+  }
+  
+  /* Show the icon on hover */
+  .image-container:hover .icon {
+    opacity: 1;
+  }
+
+ .btn {
+     background-color: var(--themeMain);
+     padding: 5px 10px;
+     text-decoration: none;
+     font-size: 16px;
+     border-radius: 10px;
+     font-weight: 500;
+     color: var(--fontColor);
+     cursor: pointer;
+     border: none;
+     transition: all 300ms;
+ }
+
+ .btn:hover {
+     color: var(--themeDarkBlack);
+ }
+
+ .download-resume {
+     position: fixed;
+     bottom: 10px;
+     right: 10px;
+ }
+
+ .experiences-container {
+     margin-top: 30px;
+     display: grid;
+     grid-template-columns: 2% 98%;
+     height: fit-content;
+     justify-content: center;
+     ;
+ }
+
+ .timeline-div {
+     display: flex;
+     justify-content: center;
+ }
+
+ .timeline {
+     width: 5px;
+     border-radius: 5px;
+     background-image: linear-gradient(#FFF, #7b7a7a);
+ }
+
+ .experience {
+     display: flex;
+     border-radius: 15px;
+     margin-left: 5px;
+     transition: all 300ms;
+ }
+
+ .experience:hover {
+     background-color: var(--themeOffBlack);
+ }
+
+ .experience>i {
+     font-size: 35px;
+     color: var(--fontColor);
+     margin-top: 0px;
+     margin-left: -31.5px;
+ }
+
+ .exp-details {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     color: var(--fontColor);
+     border-radius: 15px;
+     padding: 10px;
+ }
+
+ .exp-upper {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     color: var(--themeMain);
+ }
+
+ .exp-title {
      font-size: 22px;
+ }
+
+ .exp-duration {
+     font-size: 16px;
+ }
+
+ .exp-points {
+     margin-left: 15px;
+ }
+
+ .exp-points li {
+     font-weight: 400;
+ }
+
+ .exp-details h4 {
+     color: var(--themeGray);
+     font-weight: 200;
  }
