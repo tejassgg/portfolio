@@ -7,6 +7,7 @@
     <title>Tejas Gumgaonkar</title>
     <link rel="icon" href="./img/Logo.png">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
     <script src="./common.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -19,10 +20,18 @@
 <body>
     <div class="topNavDiv">
         <ul class="topNav">
-            <a href="#Home"><li class="tooltip"><i class="bx bx-home-alt"></i><span class="tooltiptext">Home</span></li></a>
-            <a href="#Education"><li class="tooltip"><i class="bx bx-book"></i><span class="tooltiptext">Education</span></li></a>
-            <a href="#Experiences"><li class="tooltip"><i class="bx bx-briefcase-alt"></i><span class="tooltiptext">Experiences</span></li></a>
-            <a href="#Projects"><li class="tooltip"><i class="bx bx-folder"></i><span class="tooltiptext">Projects</span></li></a>
+            <a href="#Home">
+                <li class="tooltip"><i class="bx bx-home-alt"></i><span class="tooltiptext">Home</span></li>
+            </a>
+            <a href="#Education">
+                <li class="tooltip"><i class="bx bx-book"></i><span class="tooltiptext">Education</span></li>
+            </a>
+            <a href="#Experiences">
+                <li class="tooltip"><i class="bx bx-briefcase-alt"></i><span class="tooltiptext">Experiences</span></li>
+            </a>
+            <a href="#Projects">
+                <li class="tooltip"><i class="bx bx-folder"></i><span class="tooltiptext">Projects</span></li>
+            </a>
             <li class="tooltip"><i class="bx bx-edit"></i><span class="tooltiptext">Thoughts</span></li>
         </ul>
     </div>
@@ -30,7 +39,7 @@
         <div class="container">
             <div class="profile-card">
                 <img src="./img/about3.JPEG" alt="profile">
-                <h1>Tejas Gumgaonkar</h1>
+                <h1 class="profile-title">Tejas Gumgaonkar</h1>
                 <span></span>
                 <h4>A Software Engineer with 2.5+ Years of Experience who has developed many innovative solutions </h4>
                 <div class="social-icon">
@@ -46,25 +55,26 @@
                     <div>
                         <h1 class="section-title">SOFTWARE</h1>
                         <h1 class="section-title lighter">ENGINEER</h1>
-                        <h3>Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.</h2>
-                        <div class="spanHeight"></div>
-                        <div class="numbers-container">
-                            <div class="numbers">
-                                <p>+2</p>
-                                <p class="lighterNumbers">YEARS OF</p>
-                                <p class="lighterNumbers">EXPERIENCE</p>
+                        <h3>Passionate about creating intuitive and engaging user experiences. Specialize in
+                            transforming ideas into beautifully crafted products.</h2>
+                            <div class="spanHeight"></div>
+                            <div class="numbers-container">
+                                <div class="numbers">
+                                    <p>+2</p>
+                                    <p class="lighterNumbers">YEARS OF</p>
+                                    <p class="lighterNumbers">EXPERIENCE</p>
+                                </div>
+                                <div class="numbers">
+                                    <p>+8</p>
+                                    <p class="lighterNumbers"># OF</p>
+                                    <p class="lighterNumbers">PROJECTS</p>
+                                </div>
+                                <div class="numbers">
+                                    <p>+22</p>
+                                    <p class="lighterNumbers">CHANGE REQUESTS</p>
+                                    <p class="lighterNumbers">HANDLED</p>
+                                </div>
                             </div>
-                            <div class="numbers">
-                                <p>+8</p>
-                                <p class="lighterNumbers"># OF</p>
-                                <p class="lighterNumbers">PROJECTS</p>
-                            </div>
-                            <div class="numbers">
-                                <p>+22</p>
-                                <p class="lighterNumbers">CHANGE REQUESTS</p>
-                                <p class="lighterNumbers">HANDLED</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
                 <div class="spanHeight"></div>
@@ -116,10 +126,12 @@
                                         <h4>California State University, Fresno</h4>
                                     </div>
                                     <ul class="exp-points">
-                                        <li>Evaluated student assignments, providing constructive feedback to facilitate academic growth</li>
-                                        <li>Managed and submitted student records, including grades, ensuring accuracy and confidentiality</li>
+                                        <li>Evaluated student assignments, providing constructive feedback to facilitate
+                                            academic growth</li>
+                                        <li>Managed and submitted student records, including grades, ensuring accuracy
+                                            and confidentiality</li>
                                     </ul>
-                                </div> 
+                                </div>
                             </div>
                             <div class="experience">
                                 <i class='bx bx-radio-circle'></i>
@@ -132,13 +144,17 @@
                                         <h4>Persistent Systems Limited, IN</h4>
                                     </div>
                                     <ul class="exp-points">
-                                        <li>Designed and implemented user interfaces, integrating with APIs and backend systems. Used Azure TFS for DevOps</li>
-                                        <li>Improved system performance with dynamic functionalities and database-driven computations, reducing API output time by 2.8 seconds</li>
-                                        <li>Optimized over 25 SQL stored procedures for better performance and readability</li>
+                                        <li>Designed and implemented user interfaces, integrating with APIs and backend
+                                            systems. Used Azure TFS for DevOps</li>
+                                        <li>Improved system performance with dynamic functionalities and database-driven
+                                            computations, reducing API output time by 2.8 seconds</li>
+                                        <li>Optimized over 25 SQL stored procedures for better performance and
+                                            readability</li>
                                         <li>Managed 22+ change requests independently, focusing on system details</li>
-                                        <li>Conducted VAPT, addressing critical security issues and resolving over 50 concerns across 6 environments</li>
+                                        <li>Conducted VAPT, addressing critical security issues and resolving over 50
+                                            concerns across 6 environments</li>
                                     </ul>
-                                </div> 
+                                </div>
                             </div>
                             <div class="experience">
                                 <i class='bx bx-radio-circle'></i>
@@ -155,9 +171,9 @@
                                         <li>Generated MVC for the web App (ASP.net)</li>
                                         <li>Testing, Defect logging and Verification</li>
                                     </ul>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </section>
@@ -171,7 +187,8 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Olanthroxx E-Commerce</h1>
-                                    <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
                                 <a class="image-container">
                                     <img src="./img/olanthroxx-ecom.png" alt="">
@@ -182,7 +199,8 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Memories</h1>
-                                    <a href="https://github.com/tejassgg/Memories-MERN" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/Memories-MERN" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
                                 <a href="https://memories-mernt.netlify.app/" class="image-container" target="_blank">
                                     <img src="./img/memoriesmern.png" alt="">
@@ -195,9 +213,11 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Criminotics Website</h1>
-                                    <a href="https://github.com/tejassgg/CrimeWeb" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/CrimeWeb" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
-                                <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/" class="image-container" target="_blank">
+                                <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/"
+                                    class="image-container" target="_blank">
                                     <img src="./img/criminotics_website.png" alt="">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
@@ -206,7 +226,8 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>QueryRoom</h1>
-                                    <a href="https://github.com/tejassgg/QueryRoom" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/QueryRoom" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
                                 <a class="image-container">
                                     <img src="./img/QueryRoom.png" alt="">
@@ -219,9 +240,11 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Criminotics App</h1>
-                                    <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
-                                <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view" class="image-container" target="_blank">
+                                <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view"
+                                    class="image-container" target="_blank">
                                     <img src="./img/CriminoticsApp.png" alt="">
                                     <button class="icon btn">Download <i class='bx bx-download'></i></button>
                                 </a>
@@ -230,9 +253,11 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Todo List</h1>
-                                    <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
-                                <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" class="image-container" target="_blank">
+                                <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" class="image-container"
+                                    target="_blank">
                                     <img src="./img/TodoList.PNG" alt="">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
@@ -243,19 +268,21 @@
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Wilgo Chat</h1>
-                                    <a href="https://github.com/tejassgg/wilgochat" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/wilgochat" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
                                 <a href="https://wilgochat.web.app/" class="image-container" target="_blank">
                                     <img src="./img/Wilgo.PNG" alt="">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
-                                
+
                                 <p>React JS + Firebase Collections</p>
                             </div>
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Personal Portfolio</h1>
-                                    <a href="https://github.com/tejassgg/portfolio" target="_blank"><i class='bx bx bxl-github'></i></a>
+                                        <a href="https://github.com/tejassgg/portfolio" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
                                 </div>
                                 <a href="https://tejasgumgaonkar.netlify.app/" class="image-container" target="_blank">
                                     <img src="./img/portfolio.PNG" alt="">
@@ -276,8 +303,7 @@
         </div>
     </div>
 
-    <button class="btn download-resume" target="_blank" onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Download CV <i class='bx bx-download'></i></a>
-
+    <button class="btn download-resume" target="_blank" onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Download CV <i class='bx bx-download'></i></button>
 </body>
 
 </html>

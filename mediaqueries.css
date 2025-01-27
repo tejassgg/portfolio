@@ -1,0 +1,125 @@
+@media (max-width: 1600px) {
+
+    .topNavDiv {
+        padding: 25px 0px;
+    }
+
+    .topNav {
+        padding: 0px 5px;
+    }
+
+    .topNav li {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+    .main-wrapper {
+        margin-top: 1%;
+    }
+
+    .main-container {
+        padding: 0px 25px;
+    }
+
+    .section-title {
+        font-size: 90px;
+        line-height: 75px;
+    }
+
+    .section-title-sm {
+        font-size: 70px;
+        line-height: 60px;
+    }
+
+    .profile-card {
+        padding: 30px 5px;
+    }
+
+    .profile-title {
+        font-size: 25px;
+    }
+
+    .social-icon a {
+        font-size: 20px;
+    }
+
+    .profile-card>h4 {
+        font-size: 14px;
+    }
+
+    .Home h3 {
+        width: 60%;
+        font-size: 15px;
+    }
+
+    .numbers-container {
+        width: 80%;
+    }
+
+    .numbers p {
+        font-size: 65px;
+    }
+
+    .numbers .lighterNumbers {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .spanHeight {
+        height: 32px;
+    }
+
+    .project-card,
+    .edu-card {
+        min-height: 120px;
+    }
+
+    .edu-upper-card h2 {
+        font-size: 16px;
+    }
+
+    .edu-upper-card h4 {
+        font-size: 13px;
+    }
+
+    .edu-lower-card {
+        font-size: 14px;
+    }
+
+    .experience>i {
+        font-size: 30px;
+        margin-left: -27.5px;
+    }
+
+    .exp-title {
+        font-size: 18px;
+    }
+   
+    .exp-duration {
+        font-size: 14px;
+    }
+
+    .exp-details h4 {
+        font-size: 14px;
+    }
+
+    .exp-points{
+        font-size: 13px;
+    }
+
+    .upper-card>h2{
+        font-size: 18px;
+    }
+
+    .project-card p{
+        font-size: 13px;
+    }
+
+    .btn{
+        font-size: 13px;
+    }
+
+}

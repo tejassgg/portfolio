@@ -121,7 +121,7 @@
      border-radius: 15px;
  }
 
- .profile-card>h1 {
+ .profile-title {
      padding-top: 25px;
  }
 
@@ -154,6 +154,7 @@
      text-decoration: none;
      border-radius: 8px;
      transition: all 500ms;
+     cursor: pointer;
  }
 
  .social-icon a:hover {
@@ -199,7 +200,7 @@
  }
 
  .spanHeight {
-     margin-top: 50px;
+     height: 50px;
  }
 
  .numbers-container {
