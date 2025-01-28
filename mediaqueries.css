@@ -118,6 +118,24 @@
         font-size: 13px;
     }
 
+    .tool-card img{
+        height: 35px;
+        aspect-ratio: 1/1;
+     }
+    
+     .tool-card-lower h3{
+        font-size: 15px;
+        font-weight: 600;
+     }
+    
+     .tool-card-lower p{
+        font-size: 13px;
+        color: #b9b6b6;
+     }
+
+     .input-field{
+        font-size: 13px;
+     }
     .btn{
         font-size: 13px;
     }

@@ -516,76 +516,19 @@
      font-weight: 200;
  }
 
- .form-container{
-    display: flex;
-    flex-direction: column;
-    /* row-gap: 10px; */
- }
-
- .two-fields{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 49% 49%;
-    column-gap: 2%;
-    padding: 10px 0px;
- }
-
- .phone-number{
-    grid-template-columns: 9% 89%;
- }
-
- .message{
-    grid-template-columns: 100%;
- }
-
- .input-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
- }
-
- .input-div p{
-    font-size: 12px;
-    padding: 8px 4px;
-    color: var(--fontColor);
- }
-
- /* .two-fields .input-div:nth-child(even){
-    float: left;
- } */
-
- .input-field{
-    border: none;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: auto;
-    background-color: var(--themeLightBlack);
-    font-weight: 500;
-    color: var(--fontColor);
- }
-
- .input-field:focus{
-    border-color: #ec8225;
- }
-
- .form-container .btn{
-    width: 20%;
- }
-
  .tools-container{
     color: var(--fontColor);
  }
 
  .tools-container h1{
-    font-size: 28px;
+    font-size: 25px;
+    font-weight: 600;
  }
 
  .tools{
     display: grid;
     grid-template-columns: 32% 33% 32%;
     column-gap: 1%;
-    row-gap: 5%;
  }
 
  .tool-card-layer{
@@ -621,4 +564,57 @@
 
  .tool-card-lower p{
     color: #b9b6b6;
+ }
+
+ .form-container{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .two-fields{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    padding: 10px 0px;
+ }
+
+ .phone-number{
+    grid-template-columns: 9% 89%;
+ }
+
+ .message{
+    grid-template-columns: 100%;
+ }
+
+ .input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .input-div p{
+    font-size: 12px;
+    padding: 8px 4px;
+    color: var(--fontColor);
+ }
+
+ .input-field{
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: auto;
+    background-color: var(--themeLightBlack);
+    font-weight: 500;
+    color: var(--fontColor);
+ }
+
+ .input-field:focus{
+    border: none;
+    /* outline-color: var(--themeMain); */
+ }
+
+ .form-container .btn{
+    width: 20%;
  }
