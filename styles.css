@@ -13,7 +13,7 @@
 
  :root {
      /* --themeMain: #f09444; */
-     --themeMain: #ec8225;
+     --themeMain: #ec7710;
      --fontColor: #FFF;
      --themeBlack: #252525;
      --themeOffBlack: #1b1b1b;
@@ -157,6 +157,10 @@
      cursor: pointer;
  }
 
+ .social-icon i{
+    cursor: pointer;
+ }
+
  .social-icon a:hover {
      background-color: #ebeaea;
  }
@@ -168,7 +172,7 @@
      justify-content: flex-start;
      border-radius: 15px;
      padding: 0px 40px;
-     margin-left: 50px;
+     margin-left: 30px;
  }
 
  .Home>div {
@@ -176,16 +180,20 @@
      flex-direction: column;
  }
 
+ section{
+    height: fit-content;
+ }
+
  .section-title {
      color: var(--fontColor);
-     font-size: 118px;
-     line-height: 100px;
+     font-size: 108px;
+     line-height: 90px;
  }
 
  .section-title-sm {
      color: var(--fontColor);
-     font-size: 88px;
-     line-height: 75px;
+     font-size: 80px;
+     line-height: 70px;
  }
 
  .lighter {
@@ -274,17 +282,11 @@
      transform: scale(1.02);
  }
 
- .project-card h2 {
-     font-weight: 600;
-     font-size: 22px;
- }
-
  .project-card img{
     width: 100%;
-    height: 100%;
-    margin: 5px;
     border-radius: 8px;
     transition: all 300ms;
+    cursor: pointer;
  }
 
  .project-card img:hover{
@@ -305,6 +307,11 @@
      width: 100%;
      display: flex;
      justify-content: space-between;
+ }
+
+ .upper-card h2{
+    font-weight: 600;
+    font-size: 20px;
  }
 
  .upper-card p {
@@ -357,7 +364,7 @@
  }
 
  .image-container:hover img {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
  .icon {
@@ -369,7 +376,8 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 45px; /* Adjust the size of the icon as needed */
-    color: var(--themeMain)
+    color: var(--themeMain);
+    cursor: pointer;
   }
   
   /* Show the icon on hover */
@@ -420,6 +428,12 @@
      background-image: linear-gradient(#FFF, #7b7a7a);
  }
 
+ .exp-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+ }
+
  .experience {
      display: flex;
      border-radius: 15px;
@@ -457,6 +471,7 @@
 
  .exp-title {
      font-size: 22px;
+     font-weight: 600;
  }
 
  .exp-duration {
@@ -471,7 +486,139 @@
      font-weight: 400;
  }
 
+ .exp-skills{
+    width: 100%;
+    margin-top: 15px ;
+    display: flex;
+    justify-content: start;
+ }
+
+ .exp-skills li{
+    color: var(--themeMain);
+    font-size: 13px;
+    background-color: var(--themeOffBlack);
+    border-radius: 50px;
+    padding: 5px 10px;
+    list-style: none;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .exp-skills li>img{
+    width: 25px;
+    margin-left: -5px;
+ }
+
  .exp-details h4 {
      color: var(--themeGray);
      font-weight: 200;
+ }
+
+ .form-container{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 10px; */
+ }
+
+ .two-fields{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    padding: 10px 0px;
+ }
+
+ .phone-number{
+    grid-template-columns: 9% 89%;
+ }
+
+ .message{
+    grid-template-columns: 100%;
+ }
+
+ .input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .input-div p{
+    font-size: 12px;
+    padding: 8px 4px;
+    color: var(--fontColor);
+ }
+
+ /* .two-fields .input-div:nth-child(even){
+    float: left;
+ } */
+
+ .input-field{
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: auto;
+    background-color: var(--themeLightBlack);
+    font-weight: 500;
+    color: var(--fontColor);
+ }
+
+ .input-field:focus{
+    border-color: #ec8225;
+ }
+
+ .form-container .btn{
+    width: 20%;
+ }
+
+ .tools-container{
+    color: var(--fontColor);
+ }
+
+ .tools-container h1{
+    font-size: 28px;
+ }
+
+ .tools{
+    display: grid;
+    grid-template-columns: 32% 33% 32%;
+    column-gap: 1%;
+    row-gap: 5%;
+ }
+
+ .tool-card-layer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .tool-card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 5%;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all 300ms ease;
+ }
+
+ .tool-card:hover{
+    background-color: var(--themeOffBlack);
+ }
+
+ .tool-card img{
+    height: 45px;
+    aspect-ratio: 1/1;
+    /* background-color: var(--fontColor);
+    border-radius: 8px; */
+ }
+
+ .tool-card-lower h3{
+    font-weight: 600;
+ }
+
+ .tool-card-lower p{
+    color: #b9b6b6;
  }
