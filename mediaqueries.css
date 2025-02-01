@@ -97,7 +97,7 @@
     .exp-title {
         font-size: 18px;
     }
-   
+
     .exp-duration {
         font-size: 14px;
     }
@@ -106,38 +106,124 @@
         font-size: 14px;
     }
 
-    .exp-points{
+    .exp-points {
         font-size: 13px;
     }
 
-    .upper-card>h2{
+    .upper-card>h2 {
         font-size: 18px;
     }
 
-    .project-card p{
+    .project-card p {
         font-size: 13px;
     }
 
-    .tool-card img{
+    .tool-card img {
         height: 35px;
         aspect-ratio: 1/1;
-     }
-    
-     .tool-card-lower h3{
+    }
+
+    .tool-card-lower h3 {
         font-size: 15px;
         font-weight: 600;
-     }
-    
-     .tool-card-lower p{
+    }
+
+    .tool-card-lower p {
         font-size: 13px;
         color: #b9b6b6;
-     }
+    }
 
-     .input-field{
-        font-size: 13px;
-     }
-    .btn{
+    .input-field {
         font-size: 13px;
     }
 
+    .btn {
+        font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .topNavDiv {
+        /* width: 100%; */
+    }
+
+    .topNav {
+        width: 60%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .main-container {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .Home {
+        width: 100%;
+    }
+
+    .Home h3 {
+        width: 80%;
+    }
+
+    .spanHeight {
+        height: 20px;
+    }
+
+    .section-title {
+        font-size: 75px;
+        line-height: 60px;
+    }
+
+    .section-title-sm {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .numbers-container {
+        width: 100%;
+    }
+
+    .numbers:last-child .lighterNumbers:nth-child(even) {
+        width: 120%;
+    }
+
+    .edu-card-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .exp-details{
+        width: 100%;
+        padding:0;
+    }
+
+    .exp-skills {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .exp-skills li {
+        width: fit-content;
+    }
+
+    .experience:nth-child(n+2) {
+        .exp-skills {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .exp-skills li {
+            width: max-content;
+        }
+    }
 }

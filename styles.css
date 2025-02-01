@@ -100,14 +100,13 @@
  .container {
      width: 70%;
      padding: 25px 40px;
-     display: flex;
+     display: grid;
+     grid-template-columns: 28% 72%;
      justify-content: center;
-     /* background-color: var(--themeMain); */
  }
 
  .profile-card {
      background-color: var(--fontColor);
-     width: 28%;
      height: fit-content;
      display: flex;
      flex-direction: column;
@@ -166,7 +165,6 @@
  }
 
  .main-container {
-     width: 72%;
      display: flex;
      flex-direction: column;
      justify-content: flex-start;
