@@ -576,18 +576,18 @@
                         <div class="two-fields">
                             <div class="input-div">
                                 <p>Name</p>
-                                <input type="text" class="input-field" name="Name" placeholder="Your Name">
+                                <input type="text" class="input-field" name="name" placeholder="Your Name">
                             </div>
                             <div class="input-div">
                                 <p>Email ID</p>
-                                <input type="email" class="input-field" name="EmailID" placeholder="Your Email ID">
+                                <input type="email" class="input-field" name="email" placeholder="Your Email ID">
                             </div>
                         </div>
 
                         <div class="two-fields phone-number">
                             <div class="input-div">
                                 <p>Country</p>
-                                <select type="text" class="input-field" name="Name" placeholder="Your Name">
+                                <select type="text" class="input-field" name="phoneNoExt" placeholder="Your Name">
                                     <option value="USA">+1 US</option>
                                     <option value="IN">+91 IN</option>
                                     <option value="AU">+61 AU</option>
@@ -595,7 +595,7 @@
                             </div>
                             <div class="input-div">
                                 <p>Phone Number</p>
-                                <input type="number" class="input-field" name="Number"
+                                <input type="number" class="input-field" name="phoneNo"
                                     placeholder="10 Digit Phone # (Optional)" maxlength="10">
                             </div>
                         </div>
@@ -603,13 +603,12 @@
                         <div class="two-fields message">
                             <div class="input-div">
                                 <p>Message</p>
-                                <textarea type="text" class="input-field" name="Message" cols="50" rows="7"
+                                <textarea type="text" class="input-field" name="message" cols="50" rows="7"
                                     placeholder="Message"></textarea>
                             </div>
                         </div>
 
-
-                        <button class="btn">Submit</button>
+                        <button class="btn" onclick="SubmitForm(this)">Submit</button>
                     </form>
                 </section>
 

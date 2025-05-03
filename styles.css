@@ -69,7 +69,6 @@
  }
 
  .tooltip .tooltiptext {
-     /* Position the tooltip */
      position: absolute;
      z-index: 1;
      font-size: 12px;
@@ -82,6 +81,7 @@
      backdrop-filter: blur(10px);
      transition: all ease 500ms;
      opacity: 0;
+     white-space: nowrap;
  }
 
  .tooltip:hover .tooltiptext {
@@ -578,7 +578,7 @@
  }
 
  .phone-number{
-    grid-template-columns: 9% 89%;
+    grid-template-columns: 11% 87%;
  }
 
  .message{
