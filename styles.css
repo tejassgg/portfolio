@@ -12,8 +12,8 @@
  }
 
  :root {
-     /* --themeMain: #f09444; */
-     --themeMain: #ec7710;
+     /* Dark theme variables */
+     --themeMain: #ec7710;   /* Orange */
      --fontColor: #FFF;
      --themeBlack: #252525;
      --themeOffBlack: #1b1b1b;
@@ -21,11 +21,37 @@
      --themeDarkBlack: #111;
      --themeGray: #7b7a7a;
      --themeGlass: rgba(138, 131, 131, 0.1);
+     --cardBg: #fff;
+     --cardText: #333;
+     --inputBg: rgba(255, 255, 255, 0.1);
+     --inputBorder: rgba(255, 255, 255, 0.2);
+     --inputText: #fff;
+     --inputPlaceholder: rgba(255, 255, 255, 0.6);
+ }
+
+ /* Light theme variables */
+ [data-theme="light"] {
+     --fontColor: #333;
+     --themeBlack: #f5f5f5;
+     --themeOffBlack: #e8e8e8;
+     --themeLightBlack: #f0f0f0;
+     --themeDarkBlack: #fff;
+     --themeGray: #0a0000;
+     --themeGlass: rgba(0, 0, 0, 0.1);
+     --cardBg: #f8f8f8;
+     --cardText: #333;
+     --inputBg: rgba(0, 0, 0, 0.05);
+     --inputBorder: rgba(0, 0, 0, 0.2);
+     --inputText: #333;
+     --inputPlaceholder: rgba(0, 0, 0, 0.6);
+     --toolCardText: #222;
+     --toolCardDesc: #444;
  }
 
  body {
      scroll-behavior: smooth;
      background-color: var(--themeDarkBlack);
+     transition: background-color 0.3s ease;
  }
 
  .topNavDiv {
@@ -61,6 +87,25 @@
      color: var(--fontColor);
      font-weight: 100;
      font-size: 22px;
+     transition: all 0.3s ease;
+ }
+
+ .theme-toggle {
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    color: var(--fontColor);
+    padding: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+ }
+
+ .theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--themeGlass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--inputBorder);
  }
 
  .tooltip {
@@ -82,12 +127,29 @@
      transition: all ease 500ms;
      opacity: 0;
      white-space: nowrap;
+     color: var(--fontColor);
  }
 
  .tooltip:hover .tooltiptext {
      visibility: visible;
      transform: translateY(48px);
      opacity: 1;
+ }
+
+ /* Hide tooltips on mobile devices */
+ @media (max-width: 768px) {
+     .tooltip .tooltiptext {
+         display: none;
+     }
+     
+     .topNav li {
+         min-height: 44px; /* Touch-friendly minimum height */
+     }
+     
+     .social-icon a {
+         min-height: 44px;
+         min-width: 44px;
+     }
  }
 
  .main-wrapper {
@@ -106,13 +168,15 @@
  }
 
  .profile-card {
-     background-color: var(--fontColor);
+     background-color: var(--cardBg);
+     color: var(--cardText);
      height: fit-content;
      display: flex;
      flex-direction: column;
      align-items: center;
      border-radius: 15px;
      padding: 40px 0px;
+     transition: all 0.3s ease;
  }
 
  .profile-card>img {
@@ -122,6 +186,7 @@
 
  .profile-title {
      padding-top: 25px;
+     color: var(--cardText);
  }
 
  .profile-card>h4 {
@@ -161,7 +226,7 @@
  }
 
  .social-icon a:hover {
-     background-color: #ebeaea;
+     background-color: var(--themeGlass);
  }
 
  .main-container {
@@ -196,7 +261,7 @@
 
  .lighter {
      color: var(--themeGray);
-     opacity: 0.3;
+     opacity: 0.6;
  }
 
  .Home h3 {
@@ -245,6 +310,7 @@
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
+     perspective: 1000px;
  }
 
  .project-card-container, .edu-card-container{
@@ -273,11 +339,19 @@
      border-radius: 15px;
      padding: 15px;
      cursor: pointer;
-     transition: all 300ms;
+     transition: all 0.4s ease;
+     border: 1px solid transparent;
+     transform-style: preserve-3d;
  }
 
- .project-card:hover {
-     transform: scale(1.02);
+ .project-card:hover, .edu-card:hover {
+     transform: scale(1.05);
+     /* border-color: var(--themeMain); */
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+ }
+
+ .project-card:active {
+     transform: scale(0.98);
  }
 
  .project-card img{
@@ -285,11 +359,15 @@
     border-radius: 8px;
     transition: all 300ms;
     cursor: pointer;
+    object-fit: cover;
+    min-height: 120px;
  }
 
  .project-card img:hover{
-    opacity: 0.5;
+    opacity: 0.8;
+    transform: scale(1.02);
  }
+
  .project-card h2{
     width: 100%;
     text-align: left;
@@ -330,12 +408,33 @@
      background-color: var(--fontColor);
  }
 
- .edu-lower-card, .edu-upper-card{
+ .edu-upper-card {
     width: 100%;
-    display: grid;
-    grid-template-columns: 65% 25%;
-    column-gap: 10%;
+ }
+
+ .edu-lower-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 15px;
+ }
+
+ .edu-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+ }
+
+ .university-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+ }
+
+ .edu-title {
+    flex: 1;
  }
 
  .edu-lower-card{
@@ -343,8 +442,13 @@
  }
 
  .edu-upper-card h2{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+ }
+
+ .edu-title h4 {
+    font-size: 13px;
+    opacity: 0.8;
  }
 
  .edu-card h4, .edu-lower-card p:nth-child(even){
@@ -385,25 +489,43 @@
 
  .btn {
      background-color: var(--themeMain);
-     padding: 5px 10px;
-     text-decoration: none;
-     font-size: 16px;
-     border-radius: 10px;
-     font-weight: 500;
      color: var(--fontColor);
-     cursor: pointer;
      border: none;
+     padding: 12px 25px;
+     border-radius: 10px;
+     font-weight: 600;
+     font-size: 15px;
+     cursor: pointer;
      transition: all 300ms;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     min-height: 44px; /* Touch-friendly minimum height */
  }
 
  .btn:hover {
-     color: var(--themeDarkBlack);
+     background-color: #d66a0e;
+     transform: scale(1.05);
+ }
+
+ .btn:active {
+     transform: scale(0.95);
+ }
+
+ .fixed-action-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
  }
 
  .download-resume {
-     position: fixed;
-     bottom: 10px;
-     right: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
  }
 
  .experiences-container {
@@ -464,16 +586,17 @@
      display: flex;
      justify-content: space-between;
      align-items: flex-end;
-     color: var(--themeMain);
  }
 
  .exp-title {
      font-size: 22px;
      font-weight: 600;
+     color: var(--themeMain);
  }
 
  .exp-duration {
      font-size: 16px;
+     font-weight: 600;
  }
 
  .exp-points {
@@ -492,7 +615,7 @@
  }
 
  .exp-skills li{
-    color: var(--themeMain);
+    color: #111;
     font-size: 13px;
     background-color: var(--themeOffBlack);
     border-radius: 50px;
@@ -558,10 +681,11 @@
 
  .tool-card-lower h3{
     font-weight: 600;
+    color: var(--toolCardText);
  }
 
  .tool-card-lower p{
-    color: #b9b6b6;
+    color: var(--toolCardDesc);
  }
 
  .form-container{
@@ -603,14 +727,21 @@
     padding: 10px;
     border-radius: 10px;
     cursor: auto;
-    background-color: var(--themeLightBlack);
+    background-color: var(--inputBg);
+    border: 1px solid var(--inputBorder);
     font-weight: 500;
-    color: var(--fontColor);
+    color: var(--inputText);
+    transition: all 0.3s ease;
+ }
+
+ .input-field::placeholder {
+    color: var(--inputPlaceholder);
  }
 
  .input-field:focus{
-    border: none;
-    /* outline-color: var(--themeMain); */
+    border: 1px solid var(--themeMain);
+    outline: none;
+    background-color: var(--inputBg);
  }
 
  .form-container .btn{

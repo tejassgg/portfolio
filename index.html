@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tejas Gumgaonkar</title>
     <link rel="icon" href="./img/Logo.png">
     <link rel="stylesheet" href="./styles.css">
@@ -89,8 +89,13 @@
                         <div class="edu-card-container">
                             <div class="edu-card">
                                 <div class="edu-upper-card">
-                                    <h2>MS in Computer Science </h2>
-                                    <h4>2023 - 2025</h4>
+                                    <div class="edu-header">
+                                        <img src="./img/csu logo.png" alt="CSU Fresno Logo" class="university-logo">
+                                        <div class="edu-title">
+                                            <h2>MS in Computer Science </h2>
+                                            <h4>2023 - 2025</h4>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="edu-lower-card">
                                     <p>California State University, Fresno, USA</p>
@@ -99,8 +104,13 @@
                             </div>
                             <div class="edu-card">
                                 <div class="edu-upper-card">
-                                    <h2>BE in Computer Science & Engineering </h2>
-                                    <h4>2017 - 2021</h4>
+                                    <div class="edu-header">
+                                        <img src="./img/ghrce logo.png" alt="GHRCE Logo" class="university-logo">
+                                        <div class="edu-title">
+                                            <h2>BE in Computer Science & Engg </h2>
+                                            <h4>2017 - 2021</h4>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="edu-lower-card">
                                     <p>GH Raisoni College of Engineering, Nagpur, IN</p>
@@ -171,11 +181,12 @@
                                                 alt="">&nbsp; ASP.net MVC</li>
                                         <li><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000"
                                                 alt="">&nbsp; JavaScript</li>
+                                        <li><img src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000"
+                                                alt="">&nbsp; Windows Services</li>
                                         <li>SQL</li>
                                         <li>WebAPI</li>
                                         <li>Entity Framework</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000"
-                                                alt="">&nbsp; Windows Services</li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -616,8 +627,13 @@
         </div>
     </div>
 
-    <button class="btn download-resume" target="_blank" onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Download
-        CV <i class='bx bx-download'></i></button>
+    <div class="fixed-action-buttons">
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class='bx bx-moon'></i>
+        </button>
+        <button class="btn download-resume" target="_blank" onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Download
+            CV <i class='bx bx-download'></i></button>
+    </div>
 </body>
 
 </html>
