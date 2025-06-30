@@ -208,12 +208,14 @@
         width: 95%;
         padding: 15px 20px;
         grid-template-columns: 1fr;
+        overflow-x: hidden;
     }
 
     .main-container {
         margin: 0;
         padding: 0;
         margin-top: 30px;
+        overflow-x: hidden;
     }
 
     .Home {
@@ -241,12 +243,13 @@
 
     .numbers-container {
         width: 100%;
-        flex-direction: column;
-        row-gap: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .numbers {
-        width: 100%;
+        width: 30%;
         text-align: center;
     }
 
@@ -294,11 +297,32 @@
 
     .exp-details {
         padding: 15px;
+        padding-left: 30px;
+    }
+
+    .experience > i {
+        font-size: 25px;
+        left: -10px;
+    }
+
+    .exp-upper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .exp-title {
+        font-size: 18px;
+    }
+
+    .exp-duration {
+        font-size: 14px;
     }
 
     .exp-skills {
         flex-wrap: wrap;
         row-gap: 8px;
+        gap: 6px;
     }
 
     .exp-skills li {
@@ -367,6 +391,11 @@
     .container {
         width: 100%;
         padding: 10px 15px;
+        overflow-x: hidden;
+    }
+
+    .main-container {
+        overflow-x: hidden;
     }
 
     .section-title {
@@ -387,10 +416,6 @@
         width: 80%;
     }
 
-    .profile-title {
-        font-size: 20px;
-    }
-
     .profile-card > h4 {
         font-size: 12px;
     }
@@ -409,6 +434,14 @@
 
     .numbers .lighterNumbers {
         font-size: 11px;
+    }
+
+    .numbers-container {
+        gap: 5px;
+    }
+
+    .numbers {
+        width: 32%;
     }
 
     .project-card, .edu-card {
@@ -437,6 +470,16 @@
 
     .exp-points {
         font-size: 12px;
+    }
+
+    .exp-details {
+        padding: 12px;
+        padding-left: 25px;
+    }
+
+    .experience > i {
+        font-size: 20px;
+        left: -8px;
     }
 
     .tools-container h1 {

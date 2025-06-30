@@ -1,10 +1,15 @@
  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+ html, body {
+     overflow-x: hidden;
+ }
+
  * {
      font-family: 'Poppins', sans-serif;
      padding: 0;
      margin: 0;
      cursor: default;
+     box-sizing: border-box;
  }
 
  p, h1,h2,h3,h4{
@@ -91,10 +96,12 @@
  }
 
  .theme-toggle {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 22px;
     border: none;
-    color: var(--fontColor);
+    background-color: var(--themeLightBlack);
     padding: 5px;
     aspect-ratio: 1/1;
     border-radius: 8px;
@@ -157,6 +164,7 @@
      display: flex;
      justify-content: center;
      margin-top: 2%;
+     overflow-x: hidden;
  }
 
  .container {
@@ -165,6 +173,7 @@
      display: grid;
      grid-template-columns: 28% 72%;
      justify-content: center;
+     overflow-x: hidden;
  }
 
  .profile-card {
@@ -277,25 +286,31 @@
  .numbers-container {
      width: 70%;
      display: flex;
-     justify-content: space-evenly;
+     justify-content: space-between;
      align-items: center;
+     gap: 20px;
  }
 
  .numbers {
      width: 30%;
      height: fit-content;
+     text-align: center;
+     flex: 1;
  }
 
  .numbers p {
      color: var(--fontColor);
      font-size: 80px;
      font-weight: 600;
+     margin-bottom: 0.3em;
  }
 
  .numbers .lighterNumbers {
      color: var(--themeGray);
      font-size: 16px;
      line-height: 18px;
+     margin-top: 0.1em;
+     display: block;
  }
 
  .numbers p:nth-child(even) {
@@ -528,24 +543,36 @@
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
  }
 
+ .download-resume i {
+    font-size: 18px;
+ }
+
  .experiences-container {
      margin-top: 30px;
      display: grid;
-     grid-template-columns: 2% 98%;
+     grid-template-columns: 60px 1fr;
      height: fit-content;
      justify-content: center;
-     ;
+     position: relative;
  }
 
  .timeline-div {
+     position: relative;
      display: flex;
      justify-content: center;
+     width: 60px;
  }
 
  .timeline {
+     position: absolute;
+     left: 50%;
+     top: 0;
+     transform: translateX(-50%);
      width: 5px;
+     height: 100%;
      border-radius: 5px;
      background-image: linear-gradient(#FFF, #7b7a7a);
+     z-index: 0;
  }
 
  .exp-container{
@@ -556,20 +583,28 @@
 
  .experience {
      display: flex;
+     align-items: flex-start;
      border-radius: 15px;
-     margin-left: 5px;
+     margin-left: 0;
      transition: all 300ms;
+     position: relative;
+     min-height: 90px;
  }
 
  .experience:hover {
      background-color: var(--themeOffBlack);
  }
 
- .experience>i {
-     font-size: 35px;
+ .experience > i {
+     position: absolute;
+     left: -46px;
+     top: 32px;
+     transform: translateY(-50%);
+     font-size: 32px;
      color: var(--fontColor);
-     margin-top: 0px;
-     margin-left: -31.5px;
+     z-index: 2;
+     background-color: var(--themeDarkBlack);
+     border-radius: 50%;
  }
 
  .exp-details {
@@ -578,7 +613,13 @@
      flex-direction: column;
      color: var(--fontColor);
      border-radius: 15px;
-     padding: 10px;
+     padding: 10px 10px 10px 25px;
+ }
+
+ .exp-heading-wrapper {
+     display: flex;
+     align-items: center;
+     min-height: 64px;
  }
 
  .exp-upper {
@@ -586,17 +627,22 @@
      display: flex;
      justify-content: space-between;
      align-items: flex-end;
+     flex-wrap: wrap;
+     gap: 10px;
  }
 
  .exp-title {
      font-size: 22px;
      font-weight: 600;
      color: var(--themeMain);
+     flex: 1;
+     min-width: 0;
  }
 
  .exp-duration {
      font-size: 16px;
      font-weight: 600;
+     white-space: nowrap;
  }
 
  .exp-points {
@@ -612,19 +658,25 @@
     margin-top: 15px ;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
+    gap: 8px;
  }
 
  .exp-skills li{
-    color: #111;
+    color: #fff;
     font-size: 13px;
     background-color: var(--themeOffBlack);
     border-radius: 50px;
     padding: 5px 10px;
     list-style: none;
-    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+ }
+
+ [data-theme="light"] .exp-skills li {
+    color: #111;
  }
 
  .exp-skills li>img{
@@ -650,6 +702,7 @@
     display: grid;
     grid-template-columns: 32% 33% 32%;
     column-gap: 1%;
+    gap: 10px;
  }
 
  .tool-card-layer{
@@ -666,6 +719,7 @@
     border-radius: 15px;
     padding: 10px;
     transition: all 300ms ease;
+    min-width: 0;
  }
 
  .tool-card:hover{
@@ -675,17 +729,29 @@
  .tool-card img{
     height: 45px;
     aspect-ratio: 1/1;
+    flex-shrink: 0;
     /* background-color: var(--fontColor);
     border-radius: 8px; */
+ }
+
+ .tool-card-lower{
+    min-width: 0;
+    flex: 1;
  }
 
  .tool-card-lower h3{
     font-weight: 600;
     color: var(--toolCardText);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
  }
 
  .tool-card-lower p{
     color: var(--toolCardDesc);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
  }
 
  .form-container{
