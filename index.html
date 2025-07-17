@@ -224,6 +224,13 @@
                 </section>
                 <div class="spanHeight"></div>
 
+                <!-- Toggle Button for Tools Section -->
+                <div style="text-align:center; margin-bottom: 20px;">
+                    <button class="btn" id="toggle-tools-btn" type="button">Show/Hide Tools</button>
+                </div>
+
+                <!-- Slide Container for Tools Section -->
+                <div id="tools-slide-container" class="slide-container">
                 <section id="Tools" class="Tools">
                     <h1 class="section-title-sm">TECH</h1>
                     <h1 class="section-title-sm lighter">STACK</h1>
@@ -461,6 +468,7 @@
                         </div>
                     </div>
                 </section>
+                </div>
                 <div class="spanHeight"></div>
 
                 <section id="Projects" class="Projects">
@@ -582,8 +590,37 @@
                 <section id="Contact" class="Contact">
                     <h1 class="section-title-sm">LET'S WORK</h1>
                     <h1 class="section-title-sm lighter">TOGETHER</h1>
-                    <form class="form-container">
-
+                    <div class="contact-section">
+                      <!-- Contact Info Card (Left) -->
+                      <div class="contact-info-card">
+                        <div class="contact-info-item">
+                          <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                          <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">tejasgg@gmail.com</div>
+                          </div>
+                        </div>
+                        <div class="contact-info-item">
+                          <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                          <div>
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+1 (559)-388-6490</div>
+                          </div>
+                        </div>
+                        <div class="contact-info-item">
+                          <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                          <div>
+                            <div class="contact-label">Location</div>
+                            <div class="contact-value">Fresno, CA</div>
+                          </div>
+                        </div>
+                        <div class="contact-socials">
+                          <a href="https://www.linkedin.com/in/tejas-gumgaonkar-56559714a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                          <a href="https://github.com/tejassgg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                      </div>
+                      <!-- Contact Form (Right) -->
+                      <form class="form-container" action="https://formspree.io/f/xvgqgkpb" method="POST">
                         <div class="two-fields">
                             <div class="input-div">
                                 <p>Name</p>
@@ -594,33 +631,19 @@
                                 <input type="email" class="input-field" name="email" placeholder="Your Email ID">
                             </div>
                         </div>
-
-                        <div class="two-fields phone-number">
-                            <div class="input-div">
-                                <p>Country</p>
-                                <select type="text" class="input-field" name="phoneNoExt" placeholder="Your Name">
-                                    <option value="USA">+1 US</option>
-                                    <option value="IN">+91 IN</option>
-                                    <option value="AU">+61 AU</option>
-                                </select>
-                            </div>
-                            <div class="input-div">
-                                <p>Phone Number</p>
-                                <input type="number" class="input-field" name="phoneNo"
-                                    placeholder="10 Digit Phone # (Optional)" maxlength="10">
-                            </div>
+                        <div class="input-div">
+                            <p>Subject</p>
+                            <input type="text" class="input-field" name="subject" placeholder="Subject">
                         </div>
-
                         <div class="two-fields message">
                             <div class="input-div">
                                 <p>Message</p>
-                                <textarea type="text" class="input-field" name="message" cols="50" rows="7"
-                                    placeholder="Message"></textarea>
+                                <textarea type="text" class="input-field" name="message" cols="50" rows="7" placeholder="Message"></textarea>
                             </div>
                         </div>
-
                         <button class="btn" onclick="SubmitForm(this)">Submit</button>
-                    </form>
+                      </form>
+                    </div>
                 </section>
 
             </div>
@@ -633,6 +656,36 @@
         </button>
         <button class="btn download-resume" target="_blank" onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Resume <i class='bx bx-download'></i></button>
     </div>
+
+    <script>
+        // Slide in/out animation for Tools section
+        const toolsContainer = document.getElementById('tools-slide-container');
+        const toggleBtn = document.getElementById('toggle-tools-btn');
+        let toolsVisible = true;
+        toggleBtn.addEventListener('click', function() {
+            toolsVisible = !toolsVisible;
+            if (toolsVisible) {
+                toolsContainer.classList.remove('slide-out');
+                toolsContainer.classList.add('slide-in');
+            } else {
+                toolsContainer.classList.remove('slide-in');
+                toolsContainer.classList.add('slide-out');
+            }
+        });
+        // Set initial state
+        toolsContainer.classList.add('slide-in');
+
+        // Reveal animation for Education cards
+        ScrollReveal().reveal('.edu-card', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 800,
+            easing: 'ease-in-out',
+            opacity: 0,
+            interval: 200,
+            reset: false
+        });
+    </script>
 </body>
 
 </html>
