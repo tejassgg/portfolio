@@ -393,6 +393,7 @@
      cursor: pointer;
      object-fit: cover;
      min-height: 120px;
+     height: 200px;
  }
 
  .project-card img:hover {
@@ -777,6 +778,9 @@
  .form-container {
      display: flex;
      flex-direction: column;
+     opacity: 0;
+     transform: translateX(60px);
+     transition: opacity 0.5s, transform 0.5s;
  }
 
  .two-fields {
@@ -858,6 +862,28 @@
      pointer-events: none;
  }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .contact-section {
   display: flex;
   gap: 40px;
@@ -872,6 +898,9 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 [data-theme="light"] .contact-info-card {
@@ -942,6 +971,14 @@
   background: var(--themeMain);
   color: var(--fontColor);
   box-shadow: 0 4px 16px rgba(236,119,16,0.15);
+}
+
+.contact-info-card.slide-in-left {
+  animation: slideInLeft 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.form-container.slide-in-right {
+  animation: slideInRight 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
 }
 
 @media (max-width: 768px) {

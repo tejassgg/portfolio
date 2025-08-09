@@ -70,7 +70,7 @@
                                     <p class="lighterNumbers">EXPERIENCE</p>
                                 </div>
                                 <div class="numbers">
-                                    <p>+8</p>
+                                    <p>+9</p>
                                     <p class="lighterNumbers"># OF</p>
                                     <p class="lighterNumbers">PROJECTS</p>
                                 </div>
@@ -472,22 +472,37 @@
                 <div class="spanHeight"></div>
 
                 <section id="Projects" class="Projects">
-                    <h1 class="section-title-sm">+8</h1>
+                    <h1 class="section-title-sm">+9</h1>
                     <h1 class="section-title-sm lighter">PROJECTS</h1>
                     <div class="projects-container">
                         <div class="project-card-container even">
                             <div class="project-card">
                                 <div class="upper-card">
-                                    <h2>Olanthroxx E-Commerce</h1>
-                                        <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank"><i
+                                    <h2>Team Labs</h1>
+                                        <a href="https://github.com/tejassgg/TeamLabs" target="_blank"><i
                                                 class='bx bx bxl-github'></i></a>
                                 </div>
-                                <a class="image-container">
-                                    <img src="./img/olanthroxx-ecom.png" alt="">
+                                <a href="https://team-labs.vercel.app/dashboard" class="image-container" target="_blank">
+                                    <img src="./img/TeamLabs.jpg" alt="Team Labs Dashboard">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
-                                <p>ASP.net MVC, WebAPI & SQL</p>
+                                <p>Next.js, Node.js, MongoDB & Express</p>
                             </div>
+                            <div class="project-card">
+                                <div class="upper-card">
+                                    <h2>Criminotics Website</h1>
+                                        <a href="https://github.com/tejassgg/CrimeWeb" target="_blank"><i
+                                                class='bx bx bxl-github'></i></a>
+                                </div>
+                                <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/"
+                                    class="image-container" target="_blank">
+                                    <img src="./img/criminotics_website.png" alt="">
+                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
+                                </a>
+                                <p>HTML, CSS, jQuery & Firebase</p>
+                            </div>
+                        </div>
+                        <div class="project-card-container odd">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Memories</h1>
@@ -500,21 +515,20 @@
                                 </a>
                                 <p>MongoDB, React, Express & NodeJS</p>
                             </div>
-                        </div>
-                        <div class="project-card-container odd">
                             <div class="project-card">
                                 <div class="upper-card">
-                                    <h2>Criminotics Website</h1>
-                                        <a href="https://github.com/tejassgg/CrimeWeb" target="_blank"><i
+                                    <h2>Olanthroxx E-Commerce</h1>
+                                        <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank"><i
                                                 class='bx bx bxl-github'></i></a>
                                 </div>
-                                <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/"
-                                    class="image-container" target="_blank">
-                                    <img src="./img/criminotics_website.png" alt="">
+                                <a class="image-container">
+                                    <img src="./img/olanthroxx-ecom.png" alt="">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
-                                <p>Android Studio(Java) + Firebase</p>
+                                <p>ASP.net MVC, WebAPI & SQL</p>
                             </div>
+                        </div>
+                        <div class="project-card-container even">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>QueryRoom</h1>
@@ -527,8 +541,6 @@
                                 </a>
                                 <p>ASP.net MVC, WebAPI & SQL</p>
                             </div>
-                        </div>
-                        <div class="project-card-container even">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Criminotics App</h1>
@@ -538,10 +550,12 @@
                                 <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view"
                                     class="image-container" target="_blank">
                                     <img src="./img/CriminoticsApp.png" alt="">
-                                    <button class="icon btn">Download <i class='bx bx-download'></i></button>
+                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
-                                <p>HTML, CSS, jQuery & Firebase</p>
+                                <p>Android Studio(Java) + Firebase</p>
                             </div>
+                        </div>
+                        <div class="project-card-container odd">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Todo List</h1>
@@ -555,8 +569,6 @@
                                 </a>
                                 <p>React JS, Express & Local Storage</p>
                             </div>
-                        </div>
-                        <div class="project-card-container odd">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Wilgo Chat</h1>
@@ -567,9 +579,10 @@
                                     <img src="./img/Wilgo.PNG" alt="">
                                     <i class="bx bxs-right-top-arrow-circle icon"></i>
                                 </a>
-
                                 <p>React JS + Firebase Collections</p>
                             </div>
+                        </div>
+                        <div class="project-card-container even">
                             <div class="project-card">
                                 <div class="upper-card">
                                     <h2>Personal Portfolio</h1>
@@ -685,6 +698,23 @@
             interval: 200,
             reset: false
         });
+
+        // Contact section slide-in animation
+        function animateContactSection() {
+          const contactSection = document.querySelector('.contact-section');
+          if (!contactSection) return;
+          const infoCard = contactSection.querySelector('.contact-info-card');
+          const form = contactSection.querySelector('.form-container');
+          const rect = contactSection.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight - 100 && rect.bottom > 100;
+          if (inView) {
+            infoCard.classList.add('slide-in-left');
+            form.classList.add('slide-in-right');
+            window.removeEventListener('scroll', animateContactSection);
+          }
+        }
+        window.addEventListener('scroll', animateContactSection);
+        window.addEventListener('DOMContentLoaded', animateContactSection);
     </script>
 </body>
 
