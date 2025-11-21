@@ -1,31 +1,31 @@
 // Theme toggle functionality
-let currentTheme = localStorage.getItem('theme') || 'dark';
+let currentTheme = 'dark';
 
 // Initialize theme on page load
-document.addEventListener('DOMContentLoaded', function() {
-    setTheme(currentTheme);
-    updateThemeIcon();
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     setTheme(currentTheme);
+//     updateThemeIcon();
+// });
 
-function toggleTheme() {
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(currentTheme);
-    updateThemeIcon();
-    localStorage.setItem('theme', currentTheme);
-}
+// function toggleTheme() {
+//     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+//     setTheme(currentTheme);
+//     updateThemeIcon();
+//     localStorage.setItem('theme', currentTheme);
+// }
 
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-}
+// function setTheme(theme) {
+//     document.documentElement.setAttribute('data-theme', theme);
+// }
 
-function updateThemeIcon() {
-    const themeIcon = document.querySelector('.theme-toggle i');
-    if (currentTheme === 'light') {
-        themeIcon.className = 'bx bx-sun';
-    } else {
-        themeIcon.className = 'bx bx-moon';
-    }
-}
+// function updateThemeIcon() {
+//     const themeIcon = document.querySelector('.theme-toggle i');
+//     if (currentTheme === 'light') {
+//         themeIcon.className = 'bx bx-sun';
+//     } else {
+//         themeIcon.className = 'bx bx-moon';
+//     }
+// }
 
 window.onload = function () {
   /*===== SCROLL REVEAL ANIMATION =====*/
@@ -42,18 +42,18 @@ window.onload = function () {
   sr.reveal('.Home', { delay: 200 });
   sr.reveal('.Education', { delay: 400 });
   
-  sr.reveal('.Experiences', { delay: 300 });
-  sr.reveal('.experience', { interval: 150 });
+  // sr.reveal('.Experiences', { delay: 300 });
+  // sr.reveal('.experience', { interval: 150 });
   
-  sr.reveal('.Tools', { delay: 300 });
-  sr.reveal('.tool-card', { interval: 50 });
+  // sr.reveal('.Tools', { delay: 300 });
+  // sr.reveal('.tool-card', { interval: 50 });
 
-  sr.reveal('.Projects', { delay: 300 });
-  sr.reveal('.project-card', {delay:50, easing:"ease-out", interval: 50, scale:1.1 });
+  // sr.reveal('.Projects', { delay: 300 });
+  // sr.reveal('.project-card', {delay:50, easing:"ease-out", interval: 50, scale:1.1 });
 
-  sr.reveal('.Contact', { delay: 300 });
-  sr.reveal('.input-div', { interval: 150 });
-  sr.reveal('.about-right-data', { delay: 300 });
+  // sr.reveal('.Contact', { delay: 300 });
+  // sr.reveal('.input-div', { interval: 150 });
+  // sr.reveal('.about-right-data', { delay: 300 });
 
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -85,8 +85,6 @@ window.addEventListener('resize', function() {
 
 // Form submission function (if not already defined)
 function SubmitForm(button) {
-  // Add your form submission logic here
   console.log('Form submitted');
-  // You can add actual form submission logic here
   alert('Thank you for your message! I will get back to you soon.');
 }

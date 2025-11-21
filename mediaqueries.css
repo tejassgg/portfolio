@@ -16,12 +16,26 @@
         width: 70%;
     }
 
+    /* MODIFIED */
+    body {
+        padding-top: 75px; /* Adjusted padding for smaller topNavDiv */
+    }
+
     .main-wrapper {
-        margin-top: 1%;
+        margin-top: 0;
     }
 
     .main-container {
         padding: 0px 25px;
+        /* MODIFIED: Adjusted margin-left for new fixed layout (20% width) */
+        margin-left: calc(20% + 25px + 40px);
+    }
+    
+    /* MODIFIED: Adjusted fixed position */
+    .profile-card {
+        top: 100px; /* Adjusted fixed position (75px nav + 25px gap) */
+        left: 15%;
+        width: 20%;
     }
 
     .section-title {
@@ -155,11 +169,24 @@
 @media (max-width: 1200px) {
     .container {
         width: 85%;
-        padding: 20px 30px;
+        padding: 0 30px; /* MODIFIED: Removed top/bottom padding, changed side padding */
     }
 
     .topNav {
         width: 25%;
+    }
+    
+    /* MODIFIED: Adjusted fixed position */
+    .profile-card {
+        /* Adjust fixed position for 85% container width */
+        left: 7.5%; /* (100% - 85%) / 2 = 7.5% */
+        width: 250px; /* Switch to fixed pixel width */
+        top: 100px; /* Keep consistent top */
+    }
+
+    .main-container {
+        /* MODIFIED: Adjusted margin-left for fixed pixel width (250px) + gap (25px) + container-padding-left (30px) */
+        margin-left: calc(250px + 25px + 30px); /* 305px */
     }
 
     .section-title {
@@ -188,8 +215,16 @@
 }
 
 @media (max-width: 768px) {
+    /* MODIFIED: Revert fixed top nav to static */
     .topNavDiv {
+        position: static;
+        background-color: transparent;
         padding: 20px 10px;
+    }
+
+    /* MODIFIED: Remove body padding for mobile layout */
+    body {
+        padding-top: 0;
     }
 
     .topNav {
@@ -211,11 +246,23 @@
         overflow-x: hidden;
     }
 
+    /* MODIFIED: Revert profile-card to normal flow */
+    .profile-card {
+        position: relative; 
+        top: auto;
+        left: auto;
+        width: 100%; 
+        max-width: none;
+        margin-bottom: 30px;
+    }
+
     .main-container {
         margin: 0;
         padding: 0;
-        margin-top: 30px;
+        margin-top: 30px; /* Re-added margin-top */
         overflow-x: hidden;
+        margin-left: 0; /* REMOVED fixed offset */
+        width: 100%; /* Take full width on mobile */
     }
 
     .Home {
@@ -535,4 +582,4 @@
     .edu-title h4 {
         font-size: 10px;
     }
-} 
+}
