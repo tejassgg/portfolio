@@ -88,20 +88,33 @@ function initAccordion() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
     accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
+        const roleEl = header.querySelector('.exp-role');
+        const roleText = roleEl ? roleEl.textContent.trim() : '';
+        const isPermanentOpen = roleText.includes('IT Applications Developer') || roleText === 'Software Engineer';
+        
+        if (isPermanentOpen) {
+            // Force active class on load
             const item = header.parentElement;
-            const isActive = item.classList.contains('active');
-            
-            // Close all items
-            document.querySelectorAll('.accordion-item').forEach(i => {
-                i.classList.remove('active');
-            });
-            
-            // If the item wasn't active, open it
-            if (!isActive) {
+            if (item) {
                 item.classList.add('active');
             }
-        });
+            
+            // On click, prevent closing (always keep active)
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                if (item && !item.classList.contains('active')) {
+                    item.classList.add('active');
+                }
+            });
+        } else {
+            // Standard toggle behavior for other experience cards
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                if (item) {
+                    item.classList.toggle('active');
+                }
+            });
+        }
     });
 }
 
