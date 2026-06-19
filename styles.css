@@ -461,6 +461,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     }
     .resume-button {
         width: 220px;
+        margin: 0 auto;
     }
 }
 
