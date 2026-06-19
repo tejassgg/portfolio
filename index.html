@@ -1,767 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tejas Gumgaonkar</title>
+    <title>Tejas Gumgaonkar | Software Engineer & Developer</title>
     <link rel="icon" href="./img/Logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./mediaqueries.css">
-    <script src="./common.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- FontAwesome & BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="topNavDiv">
-        <ul class="topNav">
-            <a href="#Home">
-                <li class="tooltip"><i class="bx bx-home-alt"></i><span class="tooltiptext">Home</span></li>
-            </a>
-            <a href="#Education">
-                <li class="tooltip"><i class="bx bx-book"></i><span class="tooltiptext">Education</span></li>
-            </a>
-            <a href="#Experiences">
-                <li class="tooltip"><i class="bx bx-briefcase-alt"></i><span class="tooltiptext">Experiences</span></li>
-            </a>
-            <a href="#Tools">
-                <li class="tooltip"><i class='bx bx-coin-stack'></i><span class="tooltiptext">Tech Stack</span></li>
-            </a>
-            <a href="#Projects">
-                <li class="tooltip"><i class="bx bx-folder"></i><span class="tooltiptext">Projects</span></li>
-            </a>
-            <a href="#Contact">
-                <li class="tooltip"><i class="bx bx-edit"></i><span class="tooltiptext">Contact Me</span></li>
-            </a>
-        </ul>
-    </div>
-    <div class="main-wrapper">
-        <div class="container">
-            <div class="profile-card">
-                <img src="./img/about3.JPEG" alt="profile">
-                <h1 class="profile-title">Tejas Gumgaonkar</h1>
-                <span></span>
-                <h4>A Software Engineer with 3+ Years of Experience who has developed many innovative solutions </h4>
-                <div class="social-icon">
-                    <a href="https://www.linkedin.com/in/tejas-gumgaonkar-56559714a" target="_blank"><i
-                            class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/tejassgg" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/tejassgg/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                    <a href="mailto:tejassgg@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
-                </div>
-            </div>
-            <div class="main-container">
-                <section id="Home" class="Home">
-                    <div>
-                        <h1 class="section-title">SOFTWARE</h1>
-                        <h1 class="section-title lighter">ENGINEER</h1>
-                        <h3>Passionate about creating intuitive and engaging user experiences. Specialize in
-                            transforming ideas into beautifully crafted products.</h2>
-                            <div class="spanHeight"></div>
-                            <div class="numbers-container">
-                                <div class="numbers">
-                                    <p>+3</p>
-                                    <p class="lighterNumbers">YEARS OF</p>
-                                    <p class="lighterNumbers">EXPERIENCE</p>
-                                </div>
-                                <div class="numbers">
-                                    <p>+9</p>
-                                    <p class="lighterNumbers"># OF</p>
-                                    <p class="lighterNumbers">PROJECTS</p>
-                                </div>
-                                <div class="numbers">
-                                    <p>+22</p>
-                                    <p class="lighterNumbers">CHANGE REQUESTS</p>
-                                    <p class="lighterNumbers">HANDLED</p>
-                                </div>
-                            </div>
-                    </div>
-                </section>
-                <div class="spanHeight"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
 
-                <section id="Education" class="Education">
-                    <div class="edu-container">
-                        <div class="edu-card-container">
-                            <div class="edu-card">
-                                <div class="edu-upper-card">
-                                    <div class="edu-header">
-                                        <img src="./img/csu logo.png" alt="CSU Fresno Logo" class="university-logo">
-                                        <div class="edu-title">
-                                            <h2>MS in Computer Science </h2>
-                                            <h4>2023 - 2025</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="edu-lower-card">
-                                    <p>California State University, Fresno, USA</p>
-                                    <p>CGPA (3.51/4)</p>
-                                </div>
-                            </div>
-                            <div class="edu-card">
-                                <div class="edu-upper-card">
-                                    <div class="edu-header">
-                                        <img src="./img/ghrce logo.png" alt="GHRCE Logo" class="university-logo">
-                                        <div class="edu-title">
-                                            <h2>BE in Computer Science & Engg </h2>
-                                            <h4>2017 - 2021</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="edu-lower-card">
-                                    <p>GH Raisoni College of Engineering, Nagpur, IN</p>
-                                    <p>CGPA (8.87/10)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="spanHeight"></div>
-
-                <section id="Experiences" class="Experiences">
-                    <h1 class="section-title-sm">+3 YEARS OF</h1>
-                    <h1 class="section-title-sm lighter">EXPERIENCE</h1>
-                    <div class="experiences-container">
-                        <div class="timeline-div">
-                            <div class="timeline"></div>
-                        </div>
-                        <div class="exp-container">
-                            <div class="experience">
-                                <i class='bx bx-radio-circle'></i>
-                                <div class="exp-details">
-                                    <div>
-                                        <div class="exp-upper">
-                                            <h3 class="exp-title">IT Applications Developer II</h3>
-                                            <p class="exp-duration">Mar 2026 - Present (4m)</p>
-                                        </div>
-                                        <h4>County of Riverside – ACR</h4>
-                                    </div>
-                                    <ul class="exp-points">
-                                        <li>Develop and maintain complex enterprise-level government applications utilizing C#, .NET Core, Blazor and SSMS.</li>
-                                        <li>Reduced application load time by 93% (from 8s to 0.5s) by implementing server-side pagination in SQL Stored Procedures and utilizing Blazor QuickGrid for efficient data rendering.</li>
-                                        <li>Design scalable data integrations leveraging Laserfiche for document OCR to streamline document management workflow.</li>
-                                        <li>Monitor database activity and troubleshoot performance bottlenecks utilizing DPA, implementing observability dashboards, logging, and alerting to ensure high availability for critical platforms.</li>
-                                    </ul>
-                                    <ul class="exp-skills">
-                                        <li><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000"
-                                                alt="">&nbsp; C#</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000"
-                                                alt="">&nbsp; .NET Core</li>
-                                        <li><img src="https://e7.pngegg.com/pngimages/244/430/png-clipart-microsoft-sql-server-sql-server-management-studio-database-server-microsoft-angle-text.png"
-                                                alt="">&nbsp; SSMS</li>
-                                        <li>Blazor</li>
-                                        <li>Laserfiche</li>
-                                        <li>DPA</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <i class='bx bx-radio-circle'></i>
-                                <div class="exp-details">
-                                    <div>
-                                        <div class="exp-upper">
-                                            <h3 class="exp-title">Research Assistant</h3>
-                                            <p class="exp-duration">Oct 2025 - Present (8m)</p>
-                                        </div>
-                                        <h4>California State University, Fresno</h4>
-                                    </div>
-                                    <ul class="exp-points">
-                                        <li>Contributing to research on non-invasive brain-computer interfaces using
-                                            electroencephalography (EEG) technology</li>
-                                        <li>Developing GUI for experimental paradigms using Unity game engine supporting
-                                            neuroscience research applications.</li>
-                                    </ul>
-                                    <ul class="exp-skills">
-                                        <li><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000"
-                                                alt="">&nbsp; C#</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=39848&format=png&color=000000"
-                                                alt="">&nbsp; Unity</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <i class='bx bx-radio-circle'></i>
-                                <div class="exp-details">
-                                    <div>
-                                        <div class="exp-upper">
-                                            <h3 class="exp-title">Teaching Associate - CSCi 113 & 40</h3>
-                                            <p class="exp-duration">Jan 2024 - May 2025 (1 Yr 6m)</p>
-                                        </div>
-                                        <h4>California State University, Fresno</h4>
-                                    </div>
-                                    <ul class="exp-points">
-                                        <li>Evaluated student assignments, providing constructive feedback to facilitate
-                                            academic growth.</li>
-                                        <li>Managed and submitted student records, including grades, ensuring accuracy
-                                            and confidentiality.</li>
-                                    </ul>
-                                    <ul class="exp-skills">
-                                        <li>Introduction to Computer Organization</li>
-                                        <li>Introduction to Programming and Problem Solving</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <i class='bx bx-radio-circle'></i>
-                                <div class="exp-details">
-                                    <div>
-                                        <div class="exp-upper">
-                                            <h3 class="exp-title">Software Engineer</h3>
-                                            <p class="exp-duration">July 2021 - Aug 2023(2 Yrs)</p>
-                                        </div>
-                                        <h4>Persistent Systems Limited, IN</h4>
-                                    </div>
-                                    <ul class="exp-points">
-                                        <li>Designed, maintained efficient & reusable code following Object Oriented Programming principles and MVC design patterns for
-API development supporting health critical insurance operations using C#, ASP.NET, .NET Core, and Web APIs.</li>
-                                        <li>Optimized 25+ SQL stored procedures using MS SQL Server, Entity Framework and ADO.NET with data modeling techniques
-for enhanced efficiency</li>
-                                        <li>Improved critical API response time by 2.8s through performance optimization, MVC & event driven architecture implementation</li>
-                                        <li>Led comprehensive security assessment (VAPT), resolving 50+ vulnerabilities in production systems ensuring compliance.</li>
-                                        <li>Developed and consumed RESTful Web APIs with JSON and XML data processing capabilities.</li>
-                                        <li>Orchestrated deployment across 4 environments using CI/CD pipelines and DevOps following Agile/Scrum methodologies.</li>
-                                        <li>Implemented comprehensive testing strategies including unit testing and automated API testing using industry best practices.</li>
-                                        <li>Successfully managed 22+ change requests independently, demonstrating full-stack development capabilities.</li>
-                                        <li>Participated in code reviews and contributed to team engineering standards in distributed team environment.</li>
-                                    </ul>
-
-                                    <ul class="exp-skills">
-                                        <li><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000"
-                                                alt="">&nbsp; C#</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000"
-                                                alt="">&nbsp; ASP.net MVC</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000"
-                                                alt="">&nbsp; JavaScript</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000"
-                                                alt="">&nbsp; Windows Services</li>
-                                        <li>SQL</li>
-                                        <li>WebAPI</li>
-                                        <li>Entity Framework</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <i class='bx bx-radio-circle'></i>
-                                <div class="exp-details">
-                                    <div>
-                                        <div class="exp-upper">
-                                            <h3 class="exp-title">Software Engineer Intern</h3>
-                                            <p class="exp-duration">Jan 2021 - July 2021 (6m)</p>
-                                        </div>
-                                        <h4>Persistent Systems Limited, IN</h4>
-                                    </div>
-                                    <ul class="exp-points">
-                                        <li>Developed secure web applications with Token-Based Authentication using C# and ASP.NET Web APIs.</li>
-                                        <li>Implemented MVC architecture for responsive applications using ASP.NET MVC, Entity Framework, and SQL Server</li>
-                                        <li>Performed comprehensive testing and defect management using Postman and Azure DevOps.</li>
-                                    </ul>
-
-                                    <ul class="exp-skills">
-                                        <li><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000"
-                                                alt="">&nbsp; C#</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000"
-                                                alt="">&nbsp; ASP.net MVC</li>
-                                        <li><img src="https://img.icons8.com/?size=100&id=vR6XrZzQr1CN&format=png&color=000000"
-                                                alt="">&nbsp; SQL</li>
-                                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/600px-Blazor.png"
-                                                alt="">&nbsp; Blazor</li>
-                                        <li>ADO.net</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="spanHeight"></div>
-
-                <div id="tools-slide-container" class="slide-container">
-                    <section id="Tools" class="Tools">
-                        <h1 class="section-title-sm">TECH</h1>
-                        <h1 class="section-title-sm lighter">STACK</h1>
-                        <div class="tools-container Programming">
-                            <br>
-                            <h1>Programming</h1>
-                            <div class="tools">
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>C++</h3>
-                                        <p class="lighter">Data Structure & Algorithms</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>C Sharp</h3>
-                                        <p class="lighter">Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Python</h3>
-                                        <p class="lighter">AIML & Reinforcement Learning</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=v8RpPQUwv0N8&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>HTML</h3>
-                                        <p class="lighter">Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>CSS</h3>
-                                        <p class="lighter">Web Designing</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>JavaScript</h3>
-                                        <p class="lighter">Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Java</h3>
-                                        <p class="lighter">Desktop & Android App Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=anECpXcEIboQ&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>PHP</h3>
-                                        <p class="lighter">Dynamic Websites</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=vR6XrZzQr1CN&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>SQL</h3>
-                                        <p class="lighter">Database Management & Queries</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tools-container Frameworks">
-                            <br>
-                            <h1>Frameworks</h1>
-                            <div class="tools">
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>.NET</h3>
-                                        <p class="lighter">Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Node JS</h3>
-                                        <p class="lighter">Backend Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>React JS</h3>
-                                        <p class="lighter">Component Based Arch</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=ffffff"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Express JS</h3>
-                                        <p class="lighter">API Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Next JS</h3>
-                                        <p class="lighter">SSR Applications</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>.NET Core</h3>
-                                        <p class="lighter">Cross-platform Application</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=gFw7X5Tbl3ss&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Material UI</h3>
-                                        <p class="lighter">Design UI</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=71257&format=png&color=000000" alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Angular JS</h3>
-                                        <p class="lighter">Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://grpc.io/img/logos/grpc-icon-color.png" alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>gRPC</h3>
-                                        <p class="lighter">Cross Platform Communication</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tools-container Tools">
-                            <br>
-                            <h1>Tools</h1>
-                            <div class="tools">
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=W0YEwBDDfTeu&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Figma</h3>
-                                        <p class="lighter">Design UI/UX</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=16335&format=png&color=ffffff" alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Git</h3>
-                                        <p class="lighter">Version Control System</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=74402&format=png&color=000000" alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>MongoDB</h3>
-                                        <p class="lighter">NoSQL DBMS</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://e7.pngegg.com/pngimages/244/430/png-clipart-microsoft-sql-server-sql-server-management-studio-database-server-microsoft-angle-text.png"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>SSMS</h3>
-                                        <p class="lighter">SQL DBMS</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=y7WGoWNuIWac&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Visual Studio</h3>
-                                        <p class="lighter">Code Development</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Azure Devops</h3>
-                                        <p class="lighter">Project Management</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=VoXRGxL3ekkk&format=png&color=ffffff"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>AWS</h3>
-                                        <p class="lighter">Hosting & Web Services</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-postman-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945092.png"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>Postman</h3>
-                                        <p class="lighter">API Testing</p>
-                                    </div>
-                                </div>
-                                <div class="tool-card">
-                                    <img src="https://img.icons8.com/?size=100&id=EzmQwT9W9uy4&format=png&color=000000"
-                                        alt="">
-                                    <div class="tool-card-lower">
-                                        <h3>ChatGPT</h3>
-                                        <p class="lighter">AI Assitant</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="spanHeight"></div>
-
-                <section id="Projects" class="Projects">
-                    <h1 class="section-title-sm">+9</h1>
-                    <h1 class="section-title-sm lighter">PROJECTS</h1>
-                    <div class="projects-container">
-                        <div class="project-card-container even">
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Team Labs</h1>
-                                        <a href="https://github.com/tejassgg/TeamLabs" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://team-labs.vercel.app/dashboard" class="image-container"
-                                    target="_blank">
-                                    <img src="./img/TeamLabs.jpg" alt="Team Labs Dashboard">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>Next.js, Node.js, MongoDB & Express</p>
-                            </div>
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Criminotics Website</h1>
-                                        <a href="https://github.com/tejassgg/CrimeWeb" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/"
-                                    class="image-container" target="_blank">
-                                    <img src="./img/criminotics_website.png" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>HTML, CSS, jQuery & Firebase</p>
-                            </div>
-                        </div>
-                        <div class="project-card-container odd">
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Memories</h1>
-                                        <a href="https://github.com/tejassgg/Memories-MERN" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://memories-mernt.netlify.app/" class="image-container" target="_blank">
-                                    <img src="./img/memoriesmern.png" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>MongoDB, React, Express & NodeJS</p>
-                            </div>
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Olanthroxx E-Commerce</h1>
-                                        <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a class="image-container">
-                                    <img src="./img/olanthroxx-ecom.png" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>ASP.net MVC, WebAPI & SQL</p>
-                            </div>
-                        </div>
-                        <div class="project-card-container even">
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>QueryRoom</h1>
-                                        <a href="https://github.com/tejassgg/QueryRoom" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a class="image-container">
-                                    <img src="./img/QueryRoom.png" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>ASP.net MVC, WebAPI & SQL</p>
-                            </div>
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Criminotics App</h1>
-                                        <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view"
-                                    class="image-container" target="_blank">
-                                    <img src="./img/CriminoticsApp.png" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>Android Studio(Java) + Firebase</p>
-                            </div>
-                        </div>
-                        <div class="project-card-container odd">
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Todo List</h1>
-                                        <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" class="image-container"
-                                    target="_blank">
-                                    <img src="./img/TodoList.PNG" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>React JS, Express & Local Storage</p>
-                            </div>
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Wilgo Chat</h1>
-                                        <a href="https://github.com/tejassgg/wilgochat" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://wilgochat.web.app/" class="image-container" target="_blank">
-                                    <img src="./img/Wilgo.PNG" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>React JS + Firebase Collections</p>
-                            </div>
-                        </div>
-                        <div class="project-card-container even">
-                            <div class="project-card">
-                                <div class="upper-card">
-                                    <h2>Personal Portfolio</h1>
-                                        <a href="https://github.com/tejassgg/portfolio" target="_blank"><i
-                                                class='bx bx bxl-github'></i></a>
-                                </div>
-                                <a href="https://tejasgumgaonkar.netlify.app/" class="image-container" target="_blank">
-                                    <img src="./img/portfolio.PNG" alt="">
-                                    <i class="bx bxs-right-top-arrow-circle icon"></i>
-                                </a>
-                                <p>HTML, CSS, jQuery & JavaScript</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="spanHeight"></div>
-
-                <section id="Contact" class="Contact">
-                    <h1 class="section-title-sm">LET'S WORK</h1>
-                    <h1 class="section-title-sm lighter">TOGETHER</h1>
-                    <div class="contact-section">
-                        <!-- Contact Info Card (Left) -->
-                        <div class="contact-info-card">
-                            <div class="contact-info-item">
-                                <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                                <div>
-                                    <div class="contact-label">Email</div>
-                                    <div class="contact-value">tejasgg@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                                <div>
-                                    <div class="contact-label">Phone</div>
-                                    <div class="contact-value">+1 (559)-388-6490</div>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                <div>
-                                    <div class="contact-label">Location</div>
-                                    <div class="contact-value">Fresno, CA</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Contact Form (Right) -->
-                        <form class="form-container" action="https://formspree.io/f/xvgqgkpb" method="POST">
-                            <div class="two-fields">
-                                <div class="input-div">
-                                    <p>Name</p>
-                                    <input type="text" class="input-field" name="name" placeholder="Your Name">
-                                </div>
-                                <div class="input-div">
-                                    <p>Email ID</p>
-                                    <input type="email" class="input-field" name="email" placeholder="Your Email ID">
-                                </div>
-                            </div>
-                            <div class="input-div">
-                                <p>Subject</p>
-                                <input type="text" class="input-field" name="subject" placeholder="Subject">
-                            </div>
-                            <div class="two-fields message">
-                                <div class="input-div">
-                                    <p>Message</p>
-                                    <textarea type="text" class="input-field" name="message" cols="50" rows="7"
-                                        placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <button class="btn" onclick="SubmitForm(this)">Submit</button>
-                        </form>
-                    </div>
-                </section>
-
-            </div>
+    <!-- Navigation Bar -->
+    <nav class="nav-island">
+        <div class="nav-links">
+            <a href="#Home" class="nav-link active" title="Home"><i class="bx bx-home-alt"></i><span>Home</span></a>
+            <a href="#Education" class="nav-link" title="Education"><i class="bx bx-book"></i><span>Education</span></a>
+            <a href="#Experiences" class="nav-link" title="Experience"><i class="bx bx-briefcase-alt"></i><span>Experience</span></a>
+            <a href="#Tools" class="nav-link" title="Skills"><i class='bx bx-coin-stack'></i><span>Skills</span></a>
+            <a href="#Projects" class="nav-link" title="Projects"><i class="bx bx-folder"></i><span>Projects</span></a>
+            <a href="#Contact" class="nav-link" title="Contact"><i class="bx bx-edit"></i><span>Contact</span></a>
         </div>
+    </nav>
+
+    <!-- Main Outer Wrapper -->
+    <div class="portfolio-container">
+        
+        <!-- Sidebar Panel -->
+        <aside class="sidebar-panel">
+            <div class="profile-frame">
+                <img src="./img/about3.JPEG" alt="Tejas Gumgaonkar" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Tejas Gumgaonkar</h1>
+                <p class="profile-title">IT Applications Developer II</p>
+                <p class="profile-subtitle">&amp; Software Engineer</p>
+                <p class="profile-desc">Based in Fresno, California. Building high-performance, scalable web systems.</p>
+                
+                <div class="profile-socials">
+                    <a href="https://www.linkedin.com/in/tejas-gumgaonkar-56559714a" target="_blank" class="social-btn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/tejassgg" target="_blank" class="social-btn"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/tejassgg/" target="_blank" class="social-btn"><i class='bx bxl-instagram'></i></a>
+                    <a href="mailto:tejassgg@gmail.com" target="_blank" class="social-btn"><i class='bx bx-envelope'></i></a>
+                </div>
+
+                <a href="./Tejas-Gumgaonkar-Resume.pdf" target="_blank" class="resume-button btn">
+                    <span>Download CV</span>
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Scrollable Main Content -->
+        <main class="main-content">
+            
+            <!-- Hero Section -->
+            <section id="Home" class="section hero-section reveal">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hi, I'm Tejas.</span>
+                    <h2 class="hero-headline">Building <em>fluid</em> interfaces &amp; <em>scalable</em> backends.</h2>
+                    <p class="hero-lead">I am a Software Engineer and IT Applications Developer II with 3+ years of experience crafting enterprise government platforms, high-performance database integrations, and elegant user interfaces.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years of Industry Exp.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Completed Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">22+</span>
+                        <span class="stat-label">Change Requests Handled</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="Education" class="section edu-section reveal">
+                <h3 class="section-title">Education</h3>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <span class="edu-year">2023 - 2025</span>
+                            <h4 class="edu-degree">MS in Computer Science</h4>
+                            <p class="edu-inst">California State University, Fresno</p>
+                        </div>
+                        <div class="edu-meta">
+                            <span class="edu-gpa">GPA 3.51/4.0</span>
+                            <img src="./img/csu logo.png" alt="CSU Fresno" class="edu-logo">
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <span class="edu-year">2017 - 2021</span>
+                            <h4 class="edu-degree">BE in Computer Science &amp; Engg</h4>
+                            <p class="edu-inst">GH Raisoni College of Engineering, India</p>
+                        </div>
+                        <div class="edu-meta">
+                            <span class="edu-gpa">CGPA 8.87/10</span>
+                            <img src="./img/ghrce logo.png" alt="GHRCE" class="edu-logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="Experiences" class="section exp-section reveal">
+                <h3 class="section-title">Experience</h3>
+                <div class="accordion-container">
+                    
+                    <!-- Exp Item 1 -->
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <div class="header-main">
+                                <h4 class="exp-role">IT Applications Developer II</h4>
+                                <span class="exp-company">County of Riverside – ACR</span>
+                            </div>
+                            <div class="header-side">
+                                <span class="exp-date">Mar 2026 - Present</span>
+                                <i class="bx bx-chevron-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="exp-bullets">
+                                <li>Develop and maintain complex enterprise-level government applications utilizing C#, .NET Core, Blazor and SSMS.</li>
+                                <li>Reduced application load time by 93% (from 8s to 0.5s) by implementing server-side pagination in SQL Stored Procedures and utilizing Blazor QuickGrid for efficient data rendering.</li>
+                                <li>Design scalable data integrations leveraging Laserfiche for document OCR to streamline document management workflow.</li>
+                                <li>Monitor database activity and troubleshoot performance bottlenecks utilizing DPA, implementing observability dashboards, logging, and alerting to ensure high availability for critical platforms.</li>
+                            </ul>
+                            <div class="exp-tags">
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000" alt="C#">C#</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt=".NET Core">.NET Core</span>
+                                <span class="tech-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/600px-Blazor.png" alt="Blazor">Blazor</span>
+                                <span class="tech-chip"><img src="https://e7.pngegg.com/pngimages/244/430/png-clipart-microsoft-sql-server-sql-server-management-studio-database-server-microsoft-angle-text.png" alt="SSMS">SSMS</span>
+                                <span class="tech-chip">Laserfiche</span>
+                                <span class="tech-chip">DPA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="header-main">
+                                <h4 class="exp-role">Research Assistant</h4>
+                                <span class="exp-company">California State University, Fresno</span>
+                            </div>
+                            <div class="header-side">
+                                <span class="exp-date">Oct 2025 - Present</span>
+                                <i class="bx bx-chevron-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="exp-bullets">
+                                <li>Contributing to research on non-invasive brain-computer interfaces using electroencephalography (EEG) technology.</li>
+                                <li>Developing GUI for experimental paradigms using Unity game engine supporting neuroscience research applications.</li>
+                            </ul>
+                            <div class="exp-tags">
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000" alt="C#">C#</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=39848&format=png&color=000000" alt="Unity">Unity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="header-main">
+                                <h4 class="exp-role">Teaching Associate - CSCi 113 &amp; 40</h4>
+                                <span class="exp-company">California State University, Fresno</span>
+                            </div>
+                            <div class="header-side">
+                                <span class="exp-date">Jan 2024 - May 2025</span>
+                                <i class="bx bx-chevron-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="exp-bullets">
+                                <li>Evaluated student assignments, providing constructive feedback to facilitate academic growth.</li>
+                                <li>Managed and submitted student records, including grades, ensuring accuracy and confidentiality.</li>
+                            </ul>
+                            <div class="exp-tags">
+                                <span class="tech-chip">Computer Organization</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000" alt="C++">C++ Programming</span>
+                                <span class="tech-chip">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="header-main">
+                                <h4 class="exp-role">Software Engineer</h4>
+                                <span class="exp-company">Persistent Systems Limited</span>
+                            </div>
+                            <div class="header-side">
+                                <span class="exp-date">July 2021 - Aug 2023</span>
+                                <i class="bx bx-chevron-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="exp-bullets">
+                                <li>Designed, maintained efficient &amp; reusable code following Object Oriented Programming principles and MVC design patterns for API development supporting health critical insurance operations using C#, ASP.NET, .NET Core, and Web APIs.</li>
+                                <li>Optimized 25+ SQL stored procedures using MS SQL Server, Entity Framework and ADO.NET with data modeling techniques for enhanced efficiency.</li>
+                                <li>Improved critical API response time by 2.8s through performance optimization, MVC &amp; event driven architecture implementation.</li>
+                                <li>Led comprehensive security assessment (VAPT), resolving 50+ vulnerabilities in production systems ensuring compliance.</li>
+                                <li>Developed and consumed RESTful Web APIs with JSON and XML data processing capabilities.</li>
+                                <li>Orchestrated deployment across 4 environments using CI/CD pipelines and DevOps following Agile/Scrum methodologies.</li>
+                                <li>Implemented comprehensive testing strategies including unit testing and automated API testing using industry best practices.</li>
+                                <li>Successfully managed 22+ change requests independently, demonstrating full-stack development capabilities.</li>
+                                <li>Participated in code reviews and contributed to team engineering standards in distributed team environment.</li>
+                            </ul>
+                            <div class="exp-tags">
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000" alt="C#">C#</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt="ASP.NET MVC">ASP.NET MVC</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" alt="JavaScript">JavaScript</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000" alt="Windows Services">Windows Services</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=vR6XrZzQr1CN&format=png&color=000000" alt="SQL">SQL</span>
+                                <span class="tech-chip">WebAPI</span>
+                                <span class="tech-chip">Entity Framework</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 5 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="header-main">
+                                <h4 class="exp-role">Software Engineer Intern</h4>
+                                <span class="exp-company">Persistent Systems Limited</span>
+                            </div>
+                            <div class="header-side">
+                                <span class="exp-date">Jan 2021 - July 2021</span>
+                                <i class="bx bx-chevron-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="exp-bullets">
+                                <li>Developed secure web applications with Token-Based Authentication using C# and ASP.NET Web APIs.</li>
+                                <li>Implemented MVC architecture for responsive applications using ASP.NET MVC, Entity Framework, and SQL Server.</li>
+                                <li>Performed comprehensive testing and defect management using Postman and Azure DevOps.</li>
+                            </ul>
+                            <div class="exp-tags">
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000" alt="C#">C#</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt="ASP.NET MVC">ASP.NET MVC</span>
+                                <span class="tech-chip"><img src="https://img.icons8.com/?size=100&id=vR6XrZzQr1CN&format=png&color=000000" alt="SQL">SQL</span>
+                                <span class="tech-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/600px-Blazor.png" alt="Blazor">Blazor</span>
+                                <span class="tech-chip">ADO.NET</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="Tools" class="section skills-section reveal">
+                <h3 class="section-title">Core Skills</h3>
+                <div class="skills-wrapper">
+                    
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">Languages</h4>
+                        <div class="skills-grid-modern">
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000" alt="C#" class="skill-logo">
+                                <span>C#</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=vR6XrZzQr1CN&format=png&color=000000" alt="SQL" class="skill-logo">
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" alt="JavaScript" class="skill-logo">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000" alt="Python" class="skill-logo">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000" alt="C++" class="skill-logo">
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=v8RpPQUwv0N8&format=png&color=000000" alt="HTML5" class="skill-logo">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" alt="CSS3" class="skill-logo">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000" alt="Java" class="skill-logo">
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=anECpXcEIboQ&format=png&color=000000" alt="PHP" class="skill-logo">
+                                <span>PHP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">Frameworks &amp; Architecture</h4>
+                        <div class="skills-grid-modern">
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt=".NET Core" class="skill-logo">
+                                <span>.NET Core</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/600px-Blazor.png" alt="Blazor" class="skill-logo">
+                                <span>Blazor</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png&color=000000" alt="React.js" class="skill-logo">
+                                <span>React.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000" alt="Next.js" class="skill-logo">
+                                <span>Next.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node.js" class="skill-logo">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=ffffff" alt="Express" class="skill-logo">
+                                <span>Express</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt="ASP.NET MVC" class="skill-logo">
+                                <span>ASP.NET MVC</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://grpc.io/img/logos/grpc-icon-color.png" alt="gRPC" class="skill-logo">
+                                <span>gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h4 class="skills-group-title">Tools &amp; Infrastructure</h4>
+                        <div class="skills-grid-modern">
+                            <div class="skill-card">
+                                <img src="https://e7.pngegg.com/pngimages/244/430/png-clipart-microsoft-sql-server-sql-server-management-studio-database-server-microsoft-angle-text.png" alt="SSMS" class="skill-logo">
+                                <span>SSMS</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000" alt="Azure DevOps" class="skill-logo">
+                                <span>Azure DevOps</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=16335&format=png&color=ffffff" alt="Git" class="skill-logo">
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=VoXRGxL3ekkk&format=png&color=ffffff" alt="AWS" class="skill-logo">
+                                <span>AWS</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=74402&format=png&color=000000" alt="MongoDB" class="skill-logo">
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.iconscout.com/icon/free/png-256/free-postman-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945092.png" alt="Postman" class="skill-logo">
+                                <span>Postman</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=W0YEwBDDfTeu&format=png&color=000000" alt="Figma" class="skill-logo">
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=EzmQwT9W9uy4&format=png&color=000000" alt="ChatGPT" class="skill-logo">
+                                <span>ChatGPT</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://img.icons8.com/?size=100&id=y7WGoWNuIWac&format=png&color=000000" alt="Visual Studio" class="skill-logo">
+                                <span>Visual Studio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="Projects" class="section projects-section reveal">
+                <h3 class="section-title">Projects</h3>
+                <div class="projects-asymmetric-grid">
+                    
+                    <!-- Proj 1 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://allinonedrive.team-labs.app', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/allineonedrive.png" alt="All In One Drive Dashboard" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">Next.js • Node.js • Cloud Storage API • Express</span>
+                                <div class="project-links">
+                                    <a href="https://allinonedrive.team-labs.app" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">All In One Drive</h4>
+                            <p class="project-desc">A unified cloud drive manager that aggregates Google Drive, OneDrive, and Dropbox file systems into a single responsive explorer.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Proj 2 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://www.team-labs.app/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/TeamLabs.png" alt="Team Labs Dashboard" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">Next.js • Node.js • MongoDB • Express</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/TeamLabs" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://www.team-labs.app/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Team Labs</h4>
+                            <p class="project-desc">A collaborative workspace application for software development teams, streamlining tracking, documentation, and task assignments.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 2 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('http://criminotic.com.s3-website-us-east-1.amazonaws.com/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/criminotics_website.png" alt="Criminotics Website" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">HTML • CSS • jQuery • Firebase</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/CrimeWeb" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Criminotics Website</h4>
+                            <p class="project-desc">Responsive showcase platform hosted on AWS S3, designed for educational analysis of criminology trends.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 3 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://memories-mernt.netlify.app/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/memoriesmern.png" alt="Memories App" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">MongoDB • React • Express • Node.js</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/Memories-MERN" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://memories-mernt.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Memories App</h4>
+                            <p class="project-desc">A full-stack social media application enabling users to log, tag, edit, and share personal photo journals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 4 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://github.com/tejassgg/Olanthroxx-Ecommerce', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/olanthroxx-ecom.png" alt="Olanthroxx E-Commerce" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">ASP.NET MVC • WebAPI • MS SQL Server</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Olanthroxx E-Commerce</h4>
+                            <p class="project-desc">An enterprise-grade shopping cart application powered by secure C# controllers, custom data modeling, and optimized database storage.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 5 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://github.com/tejassgg/QueryRoom', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/QueryRoom.png" alt="QueryRoom Dashboard" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">ASP.NET MVC • WebAPI • SQL</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/QueryRoom" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">QueryRoom</h4>
+                            <p class="project-desc">A ticket tracking and support Q&amp;A platform designed for teams to handle internal change requests and technical inquiries.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 6 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/CriminoticsApp.png" alt="Criminotics Android App" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">Java (Android) • Firebase SDK</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Criminotics Android App</h4>
+                            <p class="project-desc">Mobile criminology portal developed natively for Android, utilizing Firebase real-time database and analytics syncing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 7 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://main.d3brwdz2j1h1qq.amplifyapp.com/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/TodoList.PNG" alt="Todo List React" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">React.js • Express • LocalStorage</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Todo List React</h4>
+                            <p class="project-desc">Clean, minimalistic productivity dashboard supporting custom task priorities and state persistence.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 8 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://wilgochat.web.app/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/Wilgo.PNG" alt="Wilgo Chat" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">React.js • Firebase Collections</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/wilgochat" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://wilgochat.web.app/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Wilgo Chat</h4>
+                            <p class="project-desc">A real-time instantaneous chat environment supporting custom private chat lobbies and Google login authentication.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proj 9 -->
+                    <div class="project-asymmetric-card cursor-hover-project" onclick="window.open('https://tejasgumgaonkar.netlify.app/', '_blank')">
+                        <div class="project-image-wrapper">
+                            <img src="./img/portfolio.PNG" alt="Personal Portfolio V3" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-tech">HTML5 • CSS3 • Javascript • jQuery</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/tejassgg/portfolio" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://tejasgumgaonkar.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="proj-link-icon"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-name">Personal Portfolio</h4>
+                            <p class="project-desc">My professional web design workspace showing completed achievements, technical skill stack, and experiences history.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="Contact" class="section contact-section reveal">
+                <h3 class="section-title">Let's Connect</h3>
+                <div class="contact-grid">
+                    
+                    <div class="contact-details">
+                        <p class="contact-lead-text">Have a project in mind, an opportunity to discuss, or just want to chat about C#, Blazor, or databases? Drop me a line.</p>
+                        
+                        <div class="contact-channels">
+                            <div class="channel-item">
+                                <span class="channel-icon"><i class="fas fa-envelope"></i></span>
+                                <div class="channel-text">
+                                    <span class="channel-label">Email</span>
+                                    <a href="mailto:tejasgg@gmail.com" class="channel-value cursor-hover-link">tejasgg@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-icon"><i class="fas fa-phone"></i></span>
+                                <div class="channel-text">
+                                    <span class="channel-label">Phone</span>
+                                    <a href="tel:+15593886490" class="channel-value cursor-hover-link">+1 (559) 388-6490</a>
+                                </div>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <div class="channel-text">
+                                    <span class="channel-label">Location</span>
+                                    <span class="channel-value">Fresno, California, USA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="https://formspree.io/f/xvgqgkpb" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="form-name" name="name" placeholder=" " required class="form-input">
+                                <label for="form-name" class="form-label">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="form-email" name="email" placeholder=" " required class="form-input">
+                                <label for="form-email" class="form-label">Email ID</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-subject" name="subject" placeholder=" " required class="form-input">
+                            <label for="form-subject" class="form-label">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" name="message" rows="5" placeholder=" " required class="form-input"></textarea>
+                            <label for="form-message" class="form-label">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn btn cursor-hover-link">
+                            <span>Send Message</span>
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2026 Tejas Gumgaonkar. Crafted with precision.</p>
+            </footer>
+
+        </main>
     </div>
 
-    <div class="fixed-action-buttons">
-        <!-- <button class="theme-toggle" onclick="toggleTheme()">
-            <i class='bx bx-moon'></i>
-        </button> -->
-        <button class="btn download-resume" target="_blank"
-            onclick='window.open("./Tejas-Gumgaonkar-Resume.pdf")'>Resume <i class='bx bx-download'></i></button>
-    </div>
-
-    <script>
-        // Slide in/out animation for Tools section
-        const toolsContainer = document.getElementById('tools-slide-container');
-        const toggleBtn = document.getElementById('toggle-tools-btn');
-        let toolsVisible = true;
-        toggleBtn.addEventListener('click', function () {
-            toolsVisible = !toolsVisible;
-            if (toolsVisible) {
-                toolsContainer.classList.remove('slide-out');
-                toolsContainer.classList.add('slide-in');
-            } else {
-                toolsContainer.classList.remove('slide-in');
-                toolsContainer.classList.add('slide-out');
-            }
-        });
-        // Set initial state
-        toolsContainer.classList.add('slide-in');
-
-        // Reveal animation for Education cards
-        ScrollReveal().reveal('.edu-card', {
-            origin: 'bottom',
-            distance: '50px',
-            duration: 800,
-            easing: 'ease-in-out',
-            opacity: 0,
-            interval: 200,
-            reset: false
-        });
-
-        // Contact section slide-in animation
-        function animateContactSection() {
-            const contactSection = document.querySelector('.contact-section');
-            if (!contactSection) return;
-            const infoCard = contactSection.querySelector('.contact-info-card');
-            const form = contactSection.querySelector('.form-container');
-            const rect = contactSection.getBoundingClientRect();
-            const inView = rect.top < window.innerHeight - 100 && rect.bottom > 100;
-            if (inView) {
-                infoCard.classList.add('slide-in-left');
-                form.classList.add('slide-in-right');
-                window.removeEventListener('scroll', animateContactSection);
-            }
-        }
-        window.addEventListener('scroll', animateContactSection);
-        window.addEventListener('DOMContentLoaded', animateContactSection);
-    </script>
+    <!-- Scripts -->
+    <script src="./common.js"></script>
 </body>
-
 </html>

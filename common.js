@@ -1,90 +1,175 @@
-// Theme toggle functionality
-let currentTheme = 'dark';
-
-// Initialize theme on page load
-// document.addEventListener('DOMContentLoaded', function() {
-//     setTheme(currentTheme);
-//     updateThemeIcon();
-// });
-
-// function toggleTheme() {
-//     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-//     setTheme(currentTheme);
-//     updateThemeIcon();
-//     localStorage.setItem('theme', currentTheme);
-// }
-
-// function setTheme(theme) {
-//     document.documentElement.setAttribute('data-theme', theme);
-// }
-
-// function updateThemeIcon() {
-//     const themeIcon = document.querySelector('.theme-toggle i');
-//     if (currentTheme === 'light') {
-//         themeIcon.className = 'bx bx-sun';
-//     } else {
-//         themeIcon.className = 'bx bx-moon';
-//     }
-// }
-
-window.onload = function () {
-  /*===== SCROLL REVEAL ANIMATION =====*/
-  const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true,
-    mobile: true
-  });
-
-  /*SCROLL HOME*/
-  sr.reveal('.profile-card, .topNavDiv', {});
-  sr.reveal('.Home', { delay: 200 });
-  sr.reveal('.Education', { delay: 400 });
-  
-  // sr.reveal('.Experiences', { delay: 300 });
-  // sr.reveal('.experience', { interval: 150 });
-  
-  // sr.reveal('.Tools', { delay: 300 });
-  // sr.reveal('.tool-card', { interval: 50 });
-
-  // sr.reveal('.Projects', { delay: 300 });
-  // sr.reveal('.project-card', {delay:50, easing:"ease-out", interval: 50, scale:1.1 });
-
-  // sr.reveal('.Contact', { delay: 300 });
-  // sr.reveal('.input-div', { interval: 150 });
-  // sr.reveal('.about-right-data', { delay: 300 });
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // Mobile menu toggle (if needed in future)
-  const isMobile = window.innerWidth <= 768;
-  if (isMobile) {
-    // Add mobile-specific functionality here if needed
-    console.log('Mobile device detected');
-  }
-}
-
-// Handle window resize for responsive behavior
-window.addEventListener('resize', function() {
-  const isMobile = window.innerWidth <= 768;
-  // Add any resize-specific functionality here
+document.addEventListener('DOMContentLoaded', () => {
+    initCustomCursor();
+    initAccordion();
+    initScrollReveal();
+    initScrollSpy();
+    initFormInteractions();
 });
 
-// Form submission function (if not already defined)
-function SubmitForm(button) {
-  console.log('Form submitted');
-  alert('Thank you for your message! I will get back to you soon.');
+/* ==========================================================================
+   Custom Follow Cursor (Lerp) & Background Glow Tracking
+   ========================================================================== */
+function initCustomCursor() {
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+    
+    if (!cursorDot || !cursorRing) return;
+
+    // Reset styles to use translate3d
+    cursorDot.style.left = '0px';
+    cursorDot.style.top = '0px';
+    cursorRing.style.left = '0px';
+    cursorRing.style.top = '0px';
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let dotX = mouseX;
+    let dotY = mouseY;
+    let ringX = mouseX;
+    let ringY = mouseY;
+
+    // Smooth factor (0.1 = slower/smoother, 1.0 = instant)
+    const lerpDot = 0.25;
+    const lerpRing = 0.12;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Dynamic CSS variables for body background glow
+        document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    });
+
+    // Custom Cursor Loop
+    function updateCursor() {
+        // Linear Interpolation
+        dotX += (mouseX - dotX) * lerpDot;
+        dotY += (mouseY - dotY) * lerpDot;
+        ringX += (mouseX - ringX) * lerpRing;
+        ringY += (mouseY - ringY) * lerpRing;
+
+        cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
+        cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+
+        requestAnimationFrame(updateCursor);
+    }
+    
+    requestAnimationFrame(updateCursor);
+
+    // Hover Listeners
+    const setupHoverListeners = () => {
+        // Link hovers
+        const linkElements = document.querySelectorAll('a, button, .social-btn, .accordion-header, .nav-link, .submit-btn, .skill-card');
+        linkElements.forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('hovering-link'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('hovering-link'));
+        });
+
+        // Project hovers
+        const projectCards = document.querySelectorAll('.cursor-hover-project');
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => document.body.classList.add('hovering-project'));
+            card.addEventListener('mouseleave', () => document.body.classList.remove('hovering-project'));
+        });
+    };
+
+    setupHoverListeners();
+
+    // Re-bind hover listeners if DOM updates
+    const observer = new MutationObserver(setupHoverListeners);
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+
+/* ==========================================================================
+   Accordion Toggle
+   ========================================================================== */
+function initAccordion() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // If the item wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   Scroll Reveal Entrance Animations (IntersectionObserver)
+   ========================================================================== */
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Stop observing once revealed
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+}
+
+/* ==========================================================================
+   ScrollSpy Navbar Highlights
+   ========================================================================== */
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 180;
+            const sectionId = current.getAttribute('id');
+
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   Form Floating Label Focus Highlights
+   ========================================================================== */
+function initFormInteractions() {
+    const formInputs = document.querySelectorAll('.form-input');
+    
+    formInputs.forEach(input => {
+        // Toggle subject/border lines
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', () => {
+            input.parentElement.classList.remove('focused');
+        });
+    });
 }
