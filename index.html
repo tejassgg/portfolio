@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tejas Gumgaonkar | Software Engineer & Developer</title>
+    <script>
+        // Immediately check theme before DOM renders to prevent flashing
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <link rel="icon" href="./img/Logo.png">
     
     <!-- Google Fonts -->
@@ -12,7 +21,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=1.0.4">
+    <style>
+        /* Inline overrides to bypass aggressive browser caching of styles.css */
+        .project-card-link-icon,
+        .project-card-links a {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50% !important;
+            flex-shrink: 0 !important;
+        }
+        .project-card-link-icon:hover,
+        .project-card-links a:hover {
+            background-color: var(--color-accent) !important;
+            border-color: transparent !important;
+            border-radius: 50% !important;
+        }
+        /* Image adjustments for GitHub logo icon */
+        .project-card-link-icon img {
+            width: 16px !important;
+            height: 16px !important;
+            object-fit: contain !important;
+            filter: var(--tech-chip-img-filter, none) !important;
+            transition: var(--transition-fast) !important;
+        }
+        .project-card-link-icon:hover img {
+            filter: none !important;
+        }
+        .social-btn img {
+            width: 18px !important;
+            height: 18px !important;
+            object-fit: contain !important;
+            filter: var(--tech-chip-img-filter, none) !important;
+            transition: var(--transition-fast) !important;
+        }
+        .social-btn:hover img {
+            filter: none !important;
+        }
+    </style>
     
     <!-- FontAwesome & BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -32,6 +81,12 @@
             <a href="#Tools" class="nav-link" title="Skills"><i class='bx bx-coin-stack'></i><span>Skills</span></a>
             <a href="#Projects" class="nav-link" title="Projects"><i class="bx bx-folder"></i><span>Projects</span></a>
             <a href="#Contact" class="nav-link" title="Contact"><i class="bx bx-edit"></i><span>Contact</span></a>
+            
+            <span class="nav-divider"></span>
+            
+            <button class="nav-link theme-toggle-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+                <i class="bx bx-sun"></i>
+            </button>
         </div>
     </nav>
 
@@ -47,11 +102,11 @@
                 <h1 class="profile-name">Tejas Gumgaonkar</h1>
                 <p class="profile-title">IT Applications Developer II</p>
                 <p class="profile-subtitle">&amp; Software Engineer</p>
-                <p class="profile-desc">Based in Fresno, California. Building high-performance, scalable web systems.</p>
+                <p class="profile-desc">Based in Riverside, California. Building high-performance, scalable web systems.</p>
                 
                 <div class="profile-socials">
                     <a href="https://www.linkedin.com/in/tejas-gumgaonkar-56559714a" target="_blank" class="social-btn"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/tejassgg" target="_blank" class="social-btn"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/tejassgg" target="_blank" class="social-btn"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
                     <a href="https://www.instagram.com/tejassgg/" target="_blank" class="social-btn"><i class='bx bxl-instagram'></i></a>
                     <a href="mailto:tejassgg@gmail.com" target="_blank" class="social-btn"><i class='bx bx-envelope'></i></a>
                 </div>
@@ -406,7 +461,7 @@
                             
                             <!-- Express JS -->
                             <div class="skill-card" title="API Development">
-                                <img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=ffffff" alt="Express JS" class="skill-logo">
+                                <img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000" alt="Express JS" class="skill-logo">
                                 <div class="skill-info">
                                     <span class="skill-name">Express JS</span>
                                     <span class="skill-desc">API Development</span>
@@ -476,7 +531,7 @@
                             
                             <!-- Git -->
                             <div class="skill-card" title="Version Control System">
-                                <img src="https://img.icons8.com/?size=100&id=16335&format=png&color=ffffff" alt="Git" class="skill-logo">
+                                <img src="https://img.icons8.com/?size=100&id=20906&format=png&color=000000" alt="Git" class="skill-logo">
                                 <div class="skill-info">
                                     <span class="skill-name">Git</span>
                                     <span class="skill-desc">Version Control System</span>
@@ -494,7 +549,7 @@
                             
                             <!-- SSMS -->
                             <div class="skill-card" title="SQL DBMS">
-                                <img src="https://e7.pngegg.com/pngimages/244/430/png-clipart-microsoft-sql-server-sql-server-management-studio-database-server-microsoft-angle-text.png" alt="SSMS" class="skill-logo">
+                                <img src="https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000" alt="SSMS" class="skill-logo">
                                 <div class="skill-info">
                                     <span class="skill-name">SSMS</span>
                                     <span class="skill-desc">SQL DBMS</span>
@@ -521,7 +576,7 @@
                             
                             <!-- AWS -->
                             <div class="skill-card" title="Hosting &amp; Web Services">
-                                <img src="https://img.icons8.com/?size=100&id=VoXRGxL3ekkk&format=png&color=ffffff" alt="AWS" class="skill-logo">
+                                <img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" alt="AWS" class="skill-logo">
                                 <div class="skill-info">
                                     <span class="skill-name">AWS</span>
                                     <span class="skill-desc">Hosting &amp; Web Services</span>
@@ -566,15 +621,15 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">All In One Drive</h4>
                                 <div class="project-card-links">
-                                    <a href="http://github.com/tejassgg/All-In-One-Drive" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://allinonedrive.team-labs.app" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="http://github.com/tejassgg/All-In-One-Drive" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://allinonedrive.team-labs.app" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
-                            <p class="project-card-description">A unified cloud drive manager that aggregates Google Drive, OneDrive, and Dropbox file systems into a single responsive explorer.</p>
+                            <p class="project-card-description">A unified cloud drive manager that aggregates Google Drive into a single responsive explorer.</p>
                             <div class="project-card-tags-row">
                                 <span class="project-card-tag">Next.js</span>
                                 <span class="project-card-tag">Node.js</span>
-                                <span class="project-card-tag">Cloud Storage API</span>
+                                <span class="project-card-tag">Google Drive API</span>
                                 <span class="project-card-tag">Express</span>
                             </div>
                         </div>
@@ -589,8 +644,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Team Labs</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/TeamLabs" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://www.team-labs.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/TeamLabs" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://www.team-labs.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">A collaborative workspace application for software development teams, streamlining tracking, documentation, and task assignments.</p>
@@ -612,8 +667,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Criminotics Website</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/CrimeWeb" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/CrimeWeb" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="http://criminotic.com.s3-website-us-east-1.amazonaws.com/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">Responsive showcase platform hosted on AWS S3, designed for educational analysis of criminology trends.</p>
@@ -635,8 +690,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Memories App</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/Memories-MERN" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://memories-mernt.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/Memories-MERN" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://memories-mernt.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">A full-stack social media application enabling users to log, tag, edit, and share personal photo journals.</p>
@@ -658,7 +713,7 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Olanthroxx E-Commerce</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://github.com/tejassgg/Olanthroxx-Ecommerce" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
                                 </div>
                             </div>
                             <p class="project-card-description">An enterprise-grade shopping cart application powered by secure C# controllers, custom data modeling, and database storage.</p>
@@ -679,7 +734,7 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">QueryRoom</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/QueryRoom" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
+                                    <a href="https://github.com/tejassgg/QueryRoom" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
                                 </div>
                             </div>
                             <p class="project-card-description">A ticket tracking and support Q&amp;A platform designed for teams to handle internal change requests and technical inquiries.</p>
@@ -700,8 +755,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Criminotics Android App</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/CriminoticsApp" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://drive.google.com/file/d/1DjHhm0kB8tTsQYPiNWZ0RGDW6jDK_XXV/view" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">Mobile criminology portal developed natively for Android, utilizing Firebase real-time database and analytics syncing.</p>
@@ -721,8 +776,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Todo List React</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/TodoList-ReactJS" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://main.d3brwdz2j1h1qq.amplifyapp.com/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">Clean, minimalistic productivity dashboard supporting custom task priorities and state persistence.</p>
@@ -743,8 +798,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Wilgo Chat</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/wilgochat" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://wilgochat.web.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/wilgochat" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://wilgochat.web.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">A real-time instantaneous chat environment supporting custom private chat lobbies and Google login authentication.</p>
@@ -764,8 +819,8 @@
                             <div class="project-card-header-row">
                                 <h4 class="project-card-title">Personal Portfolio</h4>
                                 <div class="project-card-links">
-                                    <a href="https://github.com/tejassgg/portfolio" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bxl-github'></i></a>
-                                    <a href="https://tejasgumgaonkar.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon"><i class='bx bx-link-external'></i></a>
+                                    <a href="https://github.com/tejassgg/portfolio" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub"></a>
+                                    <a href="https://tejasgumgaonkar.netlify.app/" target="_blank" onclick="event.stopPropagation();" class="project-card-link-icon" style="border-radius: 50% !important;"><i class='bx bx-link-external'></i></a>
                                 </div>
                             </div>
                             <p class="project-card-description">My professional web design workspace showing completed achievements, technical skill stack, and experiences history.</p>
@@ -845,7 +900,7 @@
             
             <!-- Footer -->
             <footer class="footer">
-                <p>&copy; 2026 Tejas Gumgaonkar. Crafted with precision.</p>
+                <p>&copy; 2026 Tejas Gumgaonkar.</p>
             </footer>
 
         </main>

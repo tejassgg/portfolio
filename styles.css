@@ -2,7 +2,15 @@
    CSS Variables & Design System
    ========================================================================== */
 :root {
-    /* Colors */
+    /* --- Fonts & Transitions (Shared across themes) --- */
+    --font-serif: 'Instrument Serif', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+    /* --- Default Dark Theme Colors --- */
     --color-bg: #070709;
     --color-surface: #0f0f13;
     --color-surface-hover: #15151c;
@@ -18,14 +26,77 @@
     --color-accent-gradient: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
     --color-accent-glow: rgba(255, 94, 0, 0.15);
 
-    /* Fonts */
-    --font-serif: 'Instrument Serif', serif;
-    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    /* Layered Layout Background Elements */
+    --color-vignette: rgba(7, 7, 9, 0.8);
+    --color-grid-line: rgba(255, 255, 255, 0.012);
+    --color-mouse-glow: rgba(255, 94, 0, 0.04);
+
+    /* Navigation & Interface Elements */
+    --color-glass-bg: rgba(15, 15, 19, 0.7);
+    --color-glass-border: rgba(255, 255, 255, 0.15);
+    --color-glass-border-hover: rgba(255, 94, 0, 0.4);
+    --shadow-nav: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --shadow-nav-hover: 0 10px 40px rgba(255, 94, 0, 0.1), 0 10px 40px rgba(0, 0, 0, 0.5);
+
+    /* Project Cards & Experience Chips */
+    --color-glass-panel-bg: rgba(15, 15, 19, 0.7);
+    --color-glass-panel-border: rgba(255, 255, 255, 0.08);
+    --color-glass-panel-hover-bg: rgba(15, 15, 19, 0.85);
     
-    /* Layout */
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    --transition-fast: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-    --transition-slow: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    --color-project-icon-bg: rgba(255, 255, 255, 0.05);
+    --color-project-icon-border: rgba(255, 255, 255, 0.1);
+
+    --tech-chip-img-filter: invert(0.9) brightness(1.2);
+    
+    /* Button Hover Specifics */
+    --color-btn-hover-bg: #fafafa;
+    --color-btn-hover-text: #000000;
+    --shadow-btn-hover: 0 8px 24px rgba(255, 94, 0, 0.25);
+}
+
+[data-theme="light"] {
+    /* --- Light Theme Colors --- */
+    --color-bg: #f5f5f7; /* Premium soft light-gray */
+    --color-surface: #ffffff; /* Crisp white */
+    --color-surface-hover: #fafafa;
+    --color-border: #e2e2e8; /* Soft subtle border */
+    --color-border-active: #ff5e00;
+    --color-text-primary: #1d1d1f; /* Apple charcoal */
+    --color-text-secondary: #515154; /* Slate gray */
+    --color-text-muted: #86868b; /* Medium gray */
+    
+    /* Accents (Optimized for readability on light backgrounds) */
+    --color-accent: #e04e00; /* Darker sunset orange for contrast */
+    --color-accent-2: #d99c00; /* Rich warm amber */
+    --color-accent-gradient: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+    --color-accent-glow: rgba(224, 78, 0, 0.1);
+
+    /* Layered Layout Background Elements */
+    --color-vignette: rgba(245, 245, 247, 0.8);
+    --color-grid-line: rgba(0, 0, 0, 0.03); /* Soft dark grid lines */
+    --color-mouse-glow: rgba(224, 78, 0, 0.03);
+
+    /* Navigation & Interface Elements */
+    --color-glass-bg: rgba(255, 255, 255, 0.85); /* Frosty light glass */
+    --color-glass-border: rgba(0, 0, 0, 0.08);
+    --color-glass-border-hover: rgba(224, 78, 0, 0.4);
+    --shadow-nav: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-nav-hover: 0 10px 40px rgba(224, 78, 0, 0.06), 0 10px 40px rgba(0, 0, 0, 0.08);
+
+    /* Project Cards & Experience Chips */
+    --color-glass-panel-bg: rgba(255, 255, 255, 0.8);
+    --color-glass-panel-border: rgba(0, 0, 0, 0.08);
+    --color-glass-panel-hover-bg: rgba(255, 255, 255, 0.95);
+    
+    --color-project-icon-bg: rgba(0, 0, 0, 0.03);
+    --color-project-icon-border: rgba(0, 0, 0, 0.08);
+
+    --tech-chip-img-filter: none; /* Keep original black/colored icons */
+    
+    /* Button Hover Specifics */
+    --color-btn-hover-bg: #1d1d1f;
+    --color-btn-hover-text: #ffffff;
+    --shadow-btn-hover: 0 8px 24px rgba(224, 78, 0, 0.2);
 }
 
 /* ==========================================================================
@@ -45,20 +116,23 @@ html {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 body {
     background-color: var(--color-bg);
     /* Layered layout background: architectural grid + soft vignette */
     background-image: 
-        radial-gradient(circle at center, transparent 30%, rgba(7, 7, 9, 0.8) 100%),
-        linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+        radial-gradient(circle at center, transparent 30%, var(--color-vignette) 100%),
+        linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
     background-size: 100% 100%, 60px 60px, 60px 60px;
     background-position: center;
     overflow-x: hidden;
     min-height: 100vh;
     position: relative;
+    transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Dynamic radial mouse-follow background glow */
@@ -71,7 +145,7 @@ body::before {
     height: 100%;
     background: radial-gradient(
         700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        rgba(255, 94, 0, 0.04), 
+        var(--color-mouse-glow), 
         transparent 80%
     );
     pointer-events: none;
@@ -215,15 +289,15 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     background-color: var(--color-glass-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1.5px solid rgba(255, 255, 255, 0.15); /* More visible, high-end glass border */
+    border: 1.5px solid var(--color-glass-border);
     border-radius: 40px;
     padding: 6px 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-nav);
     transition: var(--transition-smooth);
 
     &:hover {
-        border-color: rgba(255, 94, 0, 0.4); /* Glow border on hover */
-        box-shadow: 0 10px 40px rgba(255, 94, 0, 0.1), 0 10px 40px rgba(0, 0, 0, 0.5);
+        border-color: var(--color-glass-border-hover);
+        box-shadow: var(--shadow-nav-hover);
     }
 }
 
@@ -267,7 +341,37 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     }
 }
 
-@media (max-width: 900px) {
+.nav-divider {
+    width: 1px;
+    height: 18px;
+    background-color: var(--color-border);
+    margin: 0 4px;
+    align-self: center;
+}
+
+@media (max-width: 576px) {
+    .nav-divider {
+        display: none;
+    }
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: none;
+    
+    i {
+        font-size: 17px;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    &:hover i {
+        transform: rotate(45deg) scale(1.15);
+    }
+}
+
+@media (max-width: 767px) {
     .nav-link span {
         display: none;
     }
@@ -296,26 +400,26 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
    ========================================================================== */
 .portfolio-container {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 320px minmax(0, 1fr);
     gap: 80px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 120px 60px 80px 60px;
+    padding: 120px 60px 0 60px;
 }
 
 @media (max-width: 1200px) {
     .portfolio-container {
-        grid-template-columns: 280px 1fr;
+        grid-template-columns: 280px minmax(0, 1fr);
         gap: 50px;
-        padding: 100px 40px 60px 40px;
+        padding: 100px 40px 0 40px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
     .portfolio-container {
         grid-template-columns: 1fr;
         gap: 60px;
-        padding: 40px 24px 100px 24px;
+        padding: 40px 24px 0 24px;
     }
 }
 
@@ -428,10 +532,10 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     border: none;
 
     &:hover {
-        background: var(--color-text-primary);
-        color: #000;
+        background: var(--color-btn-hover-bg);
+        color: var(--color-btn-hover-text);
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(255, 94, 0, 0.25);
+        box-shadow: var(--shadow-btn-hover);
     }
 
     i {
@@ -444,7 +548,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
     .sidebar-panel {
         position: relative;
         top: 0;
@@ -472,9 +576,10 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    min-width: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
     .main-content {
         gap: 80px;
     }
@@ -828,6 +933,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
         object-fit: contain;
         margin-right: 6px;
         transition: var(--transition-fast);
+        filter: var(--tech-chip-img-filter);
     }
 
     &:hover {
@@ -899,7 +1005,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     gap: 16px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
     .skills-grid-modern {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -928,7 +1034,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
         height: 36px;
         width: 36px;
         object-fit: contain;
-        transition: var(--transition-fast);
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         flex-shrink: 0;
     }
 
@@ -966,7 +1072,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
         box-shadow: 0 6px 20px rgba(255, 94, 0, 0.08);
 
         .skill-logo {
-            transform: scale(1.08);
+            transform: scale(1.2) rotate(6deg);
         }
 
         .skill-desc {
@@ -1023,10 +1129,10 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
     margin: 16px;
     z-index: 2;
     padding: 10px 16px;
-    background: rgba(15, 15, 19, 0.7);
+    background: var(--color-glass-panel-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    border: 1.5px solid var(--color-glass-panel-border);
     border-radius: 12px;
     transition: var(--transition-smooth);
     display: flex;
@@ -1064,24 +1170,50 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
 }
 
 .project-card-link-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background-color: var(--color-project-icon-bg);
+    border: 1px solid var(--color-project-icon-border);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     color: var(--color-text-primary);
     transition: var(--transition-fast);
+    flex-shrink: 0;
+}
 
-    &:hover {
-        background-color: var(--color-accent);
-        color: #000;
-        border-color: transparent;
-        transform: scale(1.1);
-    }
+.project-card-link-icon:hover {
+    background-color: var(--color-accent) !important;
+    color: #000000 !important;
+    border-color: transparent !important;
+    transform: scale(1.1);
+    border-radius: 50% !important;
+}
+
+.project-card-link-icon img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: var(--tech-chip-img-filter, none);
+    transition: var(--transition-fast);
+}
+
+.project-card-link-icon:hover img {
+    filter: none !important;
+}
+
+.social-btn img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: var(--tech-chip-img-filter, none);
+    transition: var(--transition-fast);
+}
+
+.social-btn:hover img {
+    filter: none !important;
 }
 
 .project-card-description {
@@ -1121,7 +1253,7 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
 
 .project-card-modern:hover {
     border-color: var(--color-accent);
-    box-shadow: 0 12px 40px rgba(255, 94, 0, 0.15);
+    box-shadow: 0 12px 40px var(--color-accent-glow);
 }
 
 .project-card-modern:hover .project-card-image {
@@ -1131,11 +1263,11 @@ body.hovering-project:not(.hovering-link) .cursor-dot {
 
 .project-card-modern:hover .project-card-glass-panel {
     padding: 20px;
-    background: rgba(15, 15, 19, 0.85);
+    background: var(--color-glass-panel-hover-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-color: rgba(255, 94, 0, 0.4);
-    box-shadow: 0 8px 32px rgba(255, 94, 0, 0.08);
+    border-color: var(--color-glass-border-hover);
+    box-shadow: 0 8px 32px var(--color-accent-glow);
     gap: 12px;
 }
 
